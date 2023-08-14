@@ -1,0 +1,1020 @@
+---
+title: "Meta-analysis: Relationship between procedural learning and language and literacy"
+author: "Cátia Margarida Oliveira[^1], Marianna E. Hayiou-Thomas, Lisa Henderson; University of York"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+editor_options: 
+  markdown: 
+    wrap: 72
+#bibliography: references.bib
+---
+
+<br> <br> This file is licensed under the terms and conditions of the
+CC-BY 4.0 INTERNATIONAL\
+for details on the license, see\
+<http://creativecommons.org/licenses/by/4.0/>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+devtools::source_gist("c83e078bf8c81b035e32c3fc0cf04ee8", 
+                      filename = 'render_toc.R')
+```
+
+# Import functions
+
+```{r}
+source("utils.R")
+```
+
+# Import libraries
+
+```{r echo = T,warning=FALSE,message=FALSE}
+
+MAc <- "https://cran.r-project.org/src/contrib/Archive/MAc/MAc_1.1.tar.gz"
+install.packages(MAc, repos=NULL, type="source")
+
+listOfPackages <- c("readxl", "rmarkdown","robumeta","SciViews","PublicationBias","clubSandwich",
+                    "metafor","tidyverse","readxl", "stats","dplyr", "here", "stargazer", "gridExtra", "purrr", "cowplot")
+ipak(listOfPackages)
+
+```
+
+# Data analysis
+
+To know more about Robust Variance Estimation Meta-Analysis see
+[@fisher2015; @hedges2010; @tanner-smith2014]
+
+```{r echo = T}
+# Read in file
+Dat <- read.csv(here("meta-analysis_data_analysis.csv"))
+
+#transform correlations into Fish\er Z and compute variance for effect sizes
+Dat <- escalc(measure = "ZCOR", ri = Cor, ni = N, data = Dat)
+
+#Calculate standard error - Borenstein et al. (2009) 
+Dat$sei <- sqrt(Dat$vi) 
+
+#subset data - all entries except for RAN
+Data <- subset(Dat, Variable == "Literacy"|Variable == "Language")
+RAN <- subset(Dat, Component == "RAN")
+
+```
+
+# Descriptives
+
+```{r echo = TRUE}
+
+Desc <- Data %>% group_by(Study, Group) %>% summarise(N = mean(N), Age = round(mean(Age),2), Authors = Authors[1], Year = Year[1], SRT = Seq_type[1], sequence = Seq_complexity[1])
+
+# Add number of participants and age to Earle & Ullman (2021)
+
+Desc$N[13] <- 79 
+Desc$N[12] <- 21
+Desc$Age[13] <- 20.49
+Desc$Age[12] <- 20.52
+
+Desc
+
+#write.csv(Desc, "desc.MA.csv")
+```
+
+Total number of participants: `r sum(Desc$N)` <br> Participants age
+range: `r round(range(Desc$Age),2)`, M = `r round(mean(Desc$Age),2)`, SD
+= `r round(sd(Desc$Age),2)`
+
+```{r echo = TRUE}
+#subdivide data into language and literacy measures
+Data_language <- subset(Data, Variable == "Language")
+Data_literacy <- subset(Data, Variable == "Literacy")
+
+#subdivide data into language and literacy components
+Data_grammar <- subset(Data, Component == "Grammar")
+Data_phonology <- subset(Data, Component == "Phonology")
+Data_vocabulary <- subset(Data, Component == "Vocabulary")
+Data_reading <- subset(Data, Component == "Reading")
+Data_spelling <- subset(Data, Component == "Spelling")
+
+#Preprocessing
+
+Data$Trial_no <- scale(Data$Trial_no)
+Data$Age <- scale(Data$Age)
+```
+
+# Overall model with synthesised effect sizes
+
+## Model with synthesised effect sizes for correlation of .5 (default)
+
+The default imputed correlation between within-study effect sizes is set
+at .50 (Wampold et al., 1997)
+
+```{r echo = T}
+
+study.details <- Data %>%
+  dplyr::select("Study", "Authors", "Year") %>%
+  dplyr::rename(id = Study) %>% group_by(id) %>%
+  summarise(id = id[1], Study = Authors[1], Year = Year[1])
+
+# combine effect sizes
+agg.Data.dat <- MAc::agg(id = Study, r = Cor, n = N, cor = .5, mod=NULL, data = Data)
+agg.Data.dat  <- escalc(measure = "ZCOR", ri = r, ni = n, data = agg.Data.dat)
+
+agg.Data.dat <- as.data.frame(list(agg.Data.dat, study.details) %>% reduce(right_join, by = c("id"))) 
+
+### fit fixed-effects model
+res <- rma(yi, vi, data= agg.Data.dat)
+print(res)
+
+```
+
+### Forest plot
+
+```{r echo = T}
+
+# back-transform the results to correlations and obtain the prediction interval
+predict(res, transf=transf.ztor, digits=2)
+
+# draw forest plot
+forest(res, header=TRUE, atransf=transf.ztor, order="obs", xlim=c(-1.2, .9),
+       at=transf.rtoz(seq(-0.6,0.6,by=0.1)), refline=coef(res), ilab=cbind(agg.Data.dat$Study, agg.Data.dat$Year),  ilab.xpos=c(-1,-.8), cex=.75)
+text(c(-1.2, .9), c("Author(s)", "Year"))
+
+### add text with Q-value, dfs, p-value, and I^2 statistic
+text(-16, -1, pos=4, cex=0.75, bquote(paste("RE Model (Q = ",
+     .(formatC(res$QE, digits=2, format="f")), ", df = ", .(res$k - res$p),
+     ", p = ", .(formatC(res$QEp, digits=2, format="f")), "; ", I^2, " = ",
+     .(formatC(res$I2, digits=1, format="f")), "%)")))
+
+```
+
+## Sensitivity analysis - Model with synthesised effect sizes for various correlation sizes
+
+```{r echo = T}
+
+#combine effect sizes with different correlation sizes
+
+compute_rma <- function(cor, Study, Cor, N, Data) {
+  d <- MAc::agg(id = Study, r = Cor, n = N, cor = cor, mod=NULL, data = Data)
+  d <- escalc(measure = "ZCOR", ri = r, ni = n, data = d)
+  rma(yi, vi, data= d, measure="OR", method="REML")
+}
+
+results = list()
+for (cor in  seq(.1, 1,.2))  {
+    results[[as.character(cor)]] = compute_rma(cor, Study, Cor, N, Data)
+  }
+
+print(results)
+```
+
+## Diagnostic {.tabset}
+
+### Funnel Plots
+
+```{r echo = T}
+### set up 2x2 array for plotting
+par(mfrow=c(2,2))
+
+### draw funnel plots
+funnel(res, main="Standard Error")
+funnel(res, yaxis="vi", main="Sampling Variance")
+funnel(res, yaxis="seinv", main="Inverse Standard Error")
+funnel(res, yaxis="vinv", main="Inverse Sampling Variance")
+dev.off()
+
+### funnel plot
+funnel(res)
+
+### create contour enhanced funnel plot (with funnel centered at 0)
+funnel(res, level=c(90, 95, 99), shade=c("white", "orange", "red"), refline=0, legend = TRUE)
+
+```
+
+### Egger's regression test/ PET-PEESE procedure
+
+```{r echo = T}
+#Tests for bias
+regtest(res) # PET
+regtest(res, predictor="vi") # PEESE
+```
+
+### Rank correlation test
+
+```{r echo = T}
+#Tests for bias
+ranktest(res, exact = FALSE)
+```
+
+Both ranktest and Egger's regression test do not test directly for
+publication bias. Instead, they indicate whether there's evidence that
+the funnel plot is asymmetric, which may occur due to publication bias,
+but not exclusively. According to these results there's no evidence that
+there is plot asymmetry.
+
+### Outlier/influential points detection
+
+```{r echo = T, out.width="50%"}
+par("mar")
+
+### calculate influence diagnostics
+inf <- influence(res)
+ 
+### plot the influence diagnostics
+plot(inf)
+```
+
+Neither Egger's regression test (p = .192) or the Rank correlation test
+(p = .838) was statistically significant so there's no evidence of
+publication bias according to these tests. Study 27 is identified as
+outlier/influential
+
+# Overall model with dependency
+
+```{r echo = T}
+# Overall model with dependencies: general model
+
+intercept.model <- robu(formula = yi ~ 1, data = Data,
+                       studynum = Study, var.eff.size = vi,
+                       rho = .8, small = TRUE)
+print(intercept.model)
+sensitivity(intercept.model)
+```
+
+## Forest plot
+
+```{r echo = T}
+
+forest.robu(intercept.model, es.lab = "Variable", study.lab = "Study")
+
+```
+
+## Diagnostic
+
+### Egger's regression test/ PET-PEESE procedure
+
+```{r echo = T}
+
+# with un-corrected ES (PET) - use standard error as predictor
+PET <- robu(formula = yi ~ sei, data = Data,
+                       studynum = Study, var.eff.size = vi,
+                       rho = .8, small = TRUE)
+print(PET)
+
+# with un-corrected ES (PEESE) - use variance as predictor
+PEESE <- robu(formula = yi ~ vi, data = Data,
+                       studynum = Study, var.eff.size = vi,
+                       rho = .8, small = TRUE)
+print(PEESE)
+
+```
+
+## Moderators {.tabset}
+
+### Overall Model with Variable - Language vs Literacy
+
+```{r echo = T}
+#without intercept
+Var.model<- robu(formula = yi ~ factor(Variable)-1, data = Data, studynum = Study, var.eff.size = vi,  rho = .8, small = TRUE)
+print(Var.model)
+sensitivity(Var.model)
+
+#run pairwise comparisons between variables
+Wald_test(Var.model, constraints = constrain_pairwise(1:2), vcov = "CR2", tidy = TRUE)
+
+```
+
+### Overall Model with Group
+
+```{r echo = T}
+
+stats::addmargins(table(Data$Variable, Data$Group))
+
+#Set Group as factor
+Data$Group <- as.factor(Data$Group)
+
+#without intercept
+Group.model<- robu(formula = yi ~ 0 + Group, data = Data, studynum = Study, var.eff.size = vi,  rho = .8, small = TRUE)
+print(Group.model)
+sensitivity(Group.model)
+
+#test overall group effect
+Wald_test(Group.model, constraints = matrix(c(1,0,0,0,1,0,0,0,1),3,3), vcov = "CR2")
+
+#run pairwise comparisons between groups
+Wald_test(Group.model, constraints = constrain_pairwise(1:3), vcov = "CR2", tidy = TRUE)
+
+```
+
+### Overall Model with Age
+
+```{r echo = T}
+
+#without intercept
+
+Age.model<- robu(formula = yi ~ Age, data = Data, studynum = Study, var.eff.size = vi,  rho = .8, small = TRUE)
+print(Age.model)
+
+sensitivity(Age.model)
+
+```
+
+# Modelling - Language
+
+## Model with synthesised effect sizes
+
+```{r echo = T}
+
+agg.Data.lang <- MAc::agg(id = Study, r = Cor, n = N, cor = .5, mod=NULL, data = Data_language)
+agg.Data.lang  <- escalc(measure = "ZCOR", ri = r, ni = n, data = agg.Data.lang)
+
+#add details
+agg.Data.lang <- as.data.frame(list(agg.Data.lang, study.details) %>% reduce(left_join, by = c("id"))) 
+
+### fit fixed-effects model
+res_lang <- rma(yi, vi, data= agg.Data.lang)
+print(res_lang)
+
+predict(res_lang, digits=3, transf=transf.ztor)
+
+```
+
+## Sensitivity analysis - Model with synthesised effect sizes
+
+```{r echo = T}
+
+#combine effect sizes with different correlation sizes
+
+compute_rma <- function(cor, Study, Cor, N, Data) {
+  d <- MAc::agg(id = Study, r = Cor, n = N, cor = cor, mod=NULL, data = Data_language)
+  d <- escalc(measure = "ZCOR", ri = r, ni = n, data = d)
+  rma(yi, vi, data= d, measure="OR", method="REML")
+}
+
+results = list()
+for (cor in  seq(.1, 1,.2))  {
+    results[[as.character(cor)]] = compute_rma(cor, Study, Cor, N, Data)
+  }
+
+print(results)
+```
+
+## Forest plot
+
+```{r echo = T}
+# back-transform the results to correlations and obtain the prediction interval
+predict(res_lang, transf=transf.ztor, digits=2)
+
+# draw forest plot
+forest(res_lang, header=TRUE, atransf=transf.ztor, order="obs", xlim=c(-1.2, .9),
+       at=transf.rtoz(seq(-0.6,0.6,by=0.1)), refline=coef(res_lang), ilab=cbind(agg.Data.lang$Study, agg.Data.lang$Year),  ilab.xpos=c(-1,-.8), cex=.75)
+text(c(-1.2, .9), c("Author(s)", "Year"))
+
+dev.copy(jpeg,filename="forest.lang.jpg");
+dev.off ();
+```
+
+## Diagnostics {.tabset}
+
+### Funnel plots
+
+```{r echo = T}
+### set up 2x2 array for plotting
+par(mfrow=c(2,2))
+
+### draw funnel plots
+funnel(res_lang, main="Standard Error")
+funnel(res_lang, yaxis="vi", main="Sampling Variance")
+funnel(res_lang, yaxis="seinv", main="Inverse Standard Error")
+funnel(res, yaxis="vinv", main="Inverse Sampling Variance")
+dev.off()
+
+```
+
+```{r contour plot}
+### funnel plot
+png("funnel.lang.png",bg = "white", width = 1024, height = 768)
+funnel(res_lang)
+dev.off()
+
+### create contour enhanced funnel plot (with funnel centered at 0)
+png("funnel.lang.colour.png",bg = "white", width = 1024, height = 768)
+funnel(res_lang, level=c(90, 95, 99), shade=c("white", "orange", "red"), refline=0, legend=TRUE)
+dev.off()
+```
+
+### PET-PEESE
+
+```{r echo = T}
+#Tests for bias
+regtest(res_lang) # PET
+regtest(res_lang, predictor="vi") # PEESE
+```
+
+### Outlier/influential points detection
+
+```{r echo = T}
+
+### calculate influence diagnostics
+inf_lang <- influence(res_lang)
+ 
+### plot the influence diagnostics
+plot(inf_lang)
+```
+
+## Language Model with dependencies
+
+```{r echo = T}
+# Overall model with dependencies: general model
+
+intercept.lang.model <- robu(formula = yi ~ 1, data = Data_language,
+                       studynum = Study, var.eff.size = vi,
+                       rho = .8, small = TRUE)
+print(intercept.lang.model)
+sensitivity(intercept.lang.model)
+```
+
+### Forest plot
+
+```{r echo = T}
+pdf(file = "forestplot_lang.pdf", width = 20, height = 42, pointsize = 5)
+
+forest.robu(intercept.lang.model, es.lab = "Component", study.lab = "Study", "Effect Size" = yi)
+
+dev.off()
+```
+
+### Diagnostic
+
+#### Egger's regression test/ PET-PEESE procedure
+
+```{r echo = T}
+
+# with un-corrected ES (PET) - use standard error as predictor
+PET_lang <- robu(formula = yi ~ sei, data = Data_language,
+                       studynum = Study, var.eff.size = vi,
+                       rho = .8, small = TRUE)
+print(PET_lang)
+
+# with un-corrected ES (PEESE) - use variance as predictor
+PEESE_lang <- robu(formula = yi ~ vi, data = Data_language,
+                       studynum = Study, var.eff.size = vi,
+                       rho = .8, small = TRUE)
+print(PEESE_lang)
+
+```
+
+### Moderators {.tabset}
+
+#### Language model - age as predictor
+
+```{r echo = T}
+# Overall model with dependencies: general model
+
+lang.age <- robu(formula = yi ~ Age, data = Data_language,
+                       studynum = Study, var.eff.size = vi,
+                       rho = .8, small = TRUE)
+print(lang.age)
+
+sensitivity(lang.age)
+
+```
+
+#### Language model - group as predictor
+
+```{r echo = T}
+# Overall model with dependencies: general model
+
+Data_language$Group <- as.factor(Data_language$Group)
+Data_language$Group <- relevel(Data_language$Group, ref= "TD")
+
+lang.group <- robu(formula = yi ~ as.factor(Group)-1, data = Data_language,
+                       studynum = Study, var.eff.size = vi,
+                       rho = .8, small = TRUE)
+print(lang.group)
+sensitivity(lang.group)
+
+#test overall group effect (i.e. do estimates differ from zero)
+Wald_test(lang.group, constraints = matrix(c(1,0,0,0,1,0,0,0,1),3,3), vcov = "CR2", tidy = TRUE)
+
+#run comparisons between groups (i.e. do estimates differ from each other)
+V_lang.group <- vcovCR(lang.group, type = "CR2")
+Wald_test(lang.group, constraints = constrain_equal(1:3), vcov = V_lang.group)
+
+```
+
+#### Language model - component as predictor
+
+```{r echo = T}
+# Overall model with dependencies: general model
+df <- subset(Data_language, (Component %in% c("Grammar","Vocabulary","Phonology")))
+
+lang.component <- robu(formula = yi ~ 0 + Component, data = df,
+                       studynum = Study, var.eff.size = vi,
+                       rho = .8, small = TRUE)
+print(lang.component)
+
+sensitivity(lang.component)
+
+#test overall component effect (i.e. do estimates differ from zero)
+Wald_test(lang.component, constraints = matrix(c(1,0,0,0,1,0,0,0,1),3,3), vcov = "CR2",tidy = TRUE)
+
+#run comparisons between components (i.e. do estimates differ from each other)
+V_lang.component <- vcovCR(lang.component, type = "CR2")
+Wald_test(lang.component, constraints = constrain_equal(1:3), vcov = V_lang.component)
+```
+
+#### Language model - Sequence complexity
+
+```{r echo = T}
+# Overall model with dependencies: general model )
+
+lang.seq.complexity <- robu(formula = yi ~ as.factor(Seq_complexity)-1, data = Data_language[Data_language$Seq_complexity == "FOC" | Data_language$Seq_complexity == "SOC", ],
+                       studynum = Study, var.eff.size = vi,
+                       rho = .8, small = TRUE)
+print(lang.seq.complexity)
+sensitivity(lang.seq.complexity)
+
+#run comparisons between groups
+V_seq.complexity <- vcovCR(lang.seq.complexity, type = "CR2")
+
+#test overall seq.complexity effect (i.e. do estimates differ from zero)
+Wald_test(lang.seq.complexity, constraints = constrain_zero(1:2), vcov = V_seq.complexity)
+
+#run comparisons between seq.complexity (i.e. do estimates differ from each other)
+Wald_test(lang.seq.complexity, constraints = constrain_equal(1:2), vcov = V_seq.complexity)
+```
+
+#### Language model - Session
+
+```{r echo = T}
+# Overall model with dependencies: general model
+
+table(Data_language$Time)
+
+# The effect of session was only analysed on studies that looked at session 1,2,3 in isolation as the other contrasts were only based on single studies and thus not reliable
+
+lang.session<- robu(formula = yi ~ as.factor(Time)-1, data = Data_language[Data_language$Time %in% c(1,2,3), ],
+                       studynum = Study, var.eff.size = vi,
+                       rho = .8, small = TRUE)
+
+print(lang.session)
+sensitivity(lang.session)
+
+#check overall session effect (i.e. do estimates differ from zero)
+Wald_test(lang.session, constraints = matrix(c(1,0,0, 0,1,0, 0,0,1),3,3), vcov = "CR2", tidy = TRUE)
+
+#run comparisons between groups (i.e. do estimates differ from each other)
+V_lang.session <- vcovCR(lang.session, type = "CR2")
+Wald_test(lang.session, constraints = constrain_equal(1:3), vcov = V_lang.session)
+```
+
+#### Language model - Number of trials
+
+```{r echo = T}
+# Overall model with dependencies: general model
+
+lang.trials <- robu(formula = yi ~ Trial_no, data = Data_language,
+                       studynum = Study, var.eff.size = vi,
+                       rho = .8, small = TRUE)
+print(lang.trials)
+#sensitivity(lang.trials)
+
+```
+
+#### Language model - Type of sequence
+
+```{r echo = T}
+# Overall model with dependencies: general model
+
+lang.seq.type <- robu(formula = yi ~ as.factor(Seq_type)-1, data = Data_language,
+                       studynum = Study, var.eff.size = vi,
+                       rho = .8, small = TRUE)
+print(lang.seq.type)
+sensitivity(lang.seq.type)
+
+#test overall SRT type effect (i.e. do estimates differ from zero)
+Wald_test(lang.seq.type, constraints = matrix(c(1,0,0,0,1,0,0,0,1),3,3), vcov = "CR2", tidy = TRUE)
+
+#run comparisons between groups (i.e. do estimates differ from each other)
+V_lang.seq.type <- vcovCR(lang.seq.type, type = "CR2")
+Wald_test(lang.seq.type, constraints = constrain_equal(1:3), vcov = V_lang.seq.type)
+```
+
+### Language components - Comparison between groups {.tabset}
+
+#### Grammar model - group as predictor
+
+```{r echo = T}
+
+table(Data_grammar$Group, Data_grammar$Component)
+
+grammar.model <- robu(formula = yi ~ 0 + Group, data = Data_grammar,
+                       studynum = Study, var.eff.size = vi,
+                       rho = .8, small = TRUE)
+print(grammar.model)
+
+sensitivity(grammar.model)
+
+#test overall component effect (i.e. do estimates differ from zero)
+Wald_test(grammar.model, constraints = matrix(c(1,0,0,0,1,0,0,0,1),3,3), vcov = "CR2",tidy = TRUE)
+
+#run comparisons between groups (i.e. do estimates differ from each other)
+V_grammar.model <- vcovCR(grammar.model, type = "CR2")
+Wald_test(grammar.model, constraints = constrain_pairwise(1:3), vcov = V_grammar.model)
+
+```
+
+
+#### Vocabulary model - group as predictor
+
+```{r echo = T}
+
+table(Data_vocabulary$Group, Data_vocabulary$Component)
+
+vocabulary.model <- robu(formula = yi ~ 0 + Group, data = Data_vocabulary[Data_vocabulary$Group != 'DD',],
+                       studynum = Study, var.eff.size = vi,
+                       rho = .8, small = TRUE)
+print(vocabulary.model)
+
+sensitivity(vocabulary.model)
+
+#test overall component effect (i.e. do estimates differ from zero)
+V_vocabulary.model <- vcovCR(vocabulary.model, type = "CR2")
+Wald_test(vocabulary.model, constraints = constrain_zero(1:2), vcov = V_vocabulary.model)
+
+#run comparisons between groups (i.e. do estimates differ from each other)
+V_vocabulary.model <- vcovCR(vocabulary.model, type = "CR2")
+Wald_test(vocabulary.model, constraints = constrain_equal(1:2), vcov = V_vocabulary.model)
+```
+
+#### Phonology model - group as predictor
+
+```{r echo = T}
+
+table(Data_phonology$Group, Data_phonology$Component)
+phonology.model <- robu(formula = yi ~ 0 + Group, data = Data_phonology,
+                       studynum = Study, var.eff.size = vi,
+                       rho = .8, small = TRUE)
+print(phonology.model)
+sensitivity(phonology.model)
+
+#test overall component effect (i.e. do estimates differ from zero)
+V_phonology.model <- vcovCR(phonology.model, type = "CR2")
+Wald_test(phonology.model, constraints = constrain_zero(1:3), vcov = V_phonology.model)
+
+#run comparisons between components (i.e. do estimates differ from each other)
+Wald_test(phonology.model, constraints = constrain_pairwise(1:3), vcov = V_phonology.model)
+```
+
+# Modelling - Literacy
+
+## Model with synthesised effect sizes
+
+```{r echo = T}
+
+agg.Data.lit <- MAc::agg(id = Study, r = Cor, n = N, cor = .5, mod=NULL, data = Data_literacy)
+agg.Data.lit <- escalc(measure = "ZCOR", ri = r, ni = n, data = agg.Data.lit)
+
+#add details
+agg.Data.lit <- as.data.frame(list(agg.Data.lit, study.details) %>% reduce(left_join, by = c("id"))) 
+
+### fit fixed-effects model
+res_lit <- rma(yi, vi, data= agg.Data.lit)
+print(res_lit)
+
+predict(res_lit, digits=3, transf=transf.ztor)
+```
+
+### Forest plots
+
+```{r echo = T}
+
+pdf(file= "My_MA.lit.pdf", width=20, height=8)
+
+# back-transform the results to correlations and obtain the prediction interval
+predict(res_lit, transf=transf.ztor, digits=2)
+
+# draw forest plot
+forest(res_lit, header=TRUE, atransf=transf.ztor, order="obs", xlim=c(-1.2, .9),
+       at=transf.rtoz(seq(-0.5,0.5,by=0.1)), refline=coef(res_lit), ilab=cbind(agg.Data.lit$Study, agg.Data.lit$Year),  ilab.xpos=c(-1,-.8), cex=.75)
+text(c(-1.2, .9), c("Author(s)", "Year"))
+
+dev.off()
+
+```
+
+## Sensitivity analysis - Model with synthesised effect sizes for various correlation sizes
+
+```{r echo = T}
+
+#combine effect sizes with different correlation sizes
+
+compute_rma <- function(cor, Study, Cor, N, Data) {
+  d <- MAc::agg(id = Study, r = Cor, n = N, cor = cor, mod=NULL, data = Data_literacy)
+  d <- escalc(measure = "ZCOR", ri = r, ni = n, data = d)
+  rma(yi, vi, data= d, measure="OR", method="REML")
+}
+
+results = list()
+for (cor in  seq(.1, 1,.2)) {
+    results[[as.character(cor)]] = compute_rma(cor, Study, Cor, N, Data)
+  }
+
+print(results)
+```
+
+## Diagnostic
+
+### Funnel plots
+
+```{r echo = T}
+
+### set up 2x2 array for plotting
+par(mfrow=c(2,2))
+
+### draw funnel plots
+funnel(res_lit, main="Standard Error")
+funnel(res_lit, yaxis="vi", main="Sampling Variance")
+funnel(res_lit, yaxis="seinv", main="Inverse Standard Error")
+funnel(res_lit, yaxis="vinv", main="Inverse Sampling Variance")
+
+dev.off()
+
+```
+
+```{r contour lit}
+
+### funnel plot
+png("funnel.lit..png",bg = "white", width = 1024, height = 768)
+funnel(res_lit, xlab = "Correlation coefficient")
+dev.off()
+
+### create contour enhanced funnel plot (with funnel centered at 0)
+png("funnel.lit.colour.png",bg = "white", width = 1024, height = 768)
+funnel(res_lit, level=c(90, 95, 99), shade=c("white", "orange", "red"), refline=0, legend = TRUE)
+dev.off()
+```
+
+### PET - PEESE
+
+```{r echo = T}
+
+regtest(res_lit)
+regtest(res_lit, predictor="vi") # PEESE
+
+```
+
+### Ranktest
+
+```{r echo = T}
+
+ranktest(res_lit, exact = FALSE)
+```
+
+### Outlier/influential points detection
+
+```{r echo = T}
+
+### calculate influence diagnostics
+inf_lit <- influence(res_lit)
+ 
+### plot the influence diagnostics
+plot(inf_lit)
+```
+
+## Literacy Model with dependencies
+
+```{r echo = T}
+
+# Overall model with dependencies: general model
+
+intercept.lit.model <- robu(formula = yi ~ 1, data = Data_literacy,
+                       studynum = Study, var.eff.size = vi,
+                       rho = .8, small = TRUE)
+
+print(intercept.lit.model)
+sensitivity(intercept.lit.model)
+```
+
+### Forest plot
+
+```{r eval = F}
+
+pdf(file = "forestplot_lit.pdf", width = 20, height = 28, pointsize = 8)
+
+forest.robu(intercept.lit.model, es.lab = "Component", study.lab = "Study", "Effect Size" = yi)
+
+dev.off()
+```
+
+### Diagnostic
+
+#### Egger's regression test/ PET-PEESE procedure
+
+```{r echo = T}
+
+# with un-corrected ES (PET) - use standard error as predictor
+PET_lit <- robu(formula = yi ~ sei, data = Data_literacy,
+                       studynum = Study, var.eff.size = vi,
+                       rho = .8, small = TRUE)
+print(PET_lit)
+
+# with un-corrected ES (PEESE) - use variance as predictor
+PEESE_lit <- robu(formula = yi ~ vi, data = Data_literacy,
+                       studynum = Study, var.eff.size = vi,
+                       rho = .8, small = TRUE)
+print(PEESE_lit)
+
+```
+
+### Moderators {.tabset}
+
+#### Literacy model - Group as predictor
+
+```{r echo = T}
+
+lit.group <- robu(formula = yi ~ 0 + Group, data = Data_literacy, studynum = Study, var.eff.size = vi,
+                       rho = .8, small = TRUE)
+print(lit.group)
+sensitivity(lit.group)
+
+#test overall component effect (i.e. do estimates differ from zero)
+Wald_test(lit.group, constraints = matrix(c(1,0,0,0,1,0,0,0,1),3,3), vcov = "CR2")
+
+#run comparisons between groups (i.e. do estimates differ from each other)
+V_lit.group <- vcovCR(lit.group, type = "CR2")
+Wald_test(lit.group, constraints = constrain_equal(1:3), vcov = V_lit.group)
+```
+
+#### Literacy model - Component as predictor
+
+```{r echo = T}
+
+# Overall model with dependencies: general model
+table(Data_literacy$Component, Data_literacy$Variable)
+
+lit.component <- robu(formula = yi ~ 0 + Component, data = Data_literacy[Data_literacy$Component == 'Reading'| Data_literacy$Component == "Spelling",], studynum = Study, var.eff.size = vi,
+                       rho = .8, small = TRUE)
+print(lit.component)
+sensitivity(lit.component)
+
+#test overall component effect (i.e. do estimates differ from zero)
+Wald_test(lit.component, constraints = matrix(c(1,0,0,1),2,2), vcov = "CR2")
+
+#run comparisons between components (i.e. do estimates differ from each other)
+V_lit.component <- vcovCR(lit.component, type = "CR2")
+Wald_test(lit.component, constraints = constrain_equal(1:2), vcov = V_lit.component)
+```
+
+#### Literacy model - Age
+
+```{r echo = T}
+# Overall model with dependencies: general model
+
+
+lit.age <- robu(formula = yi ~ Age, data = Data_literacy,
+                       studynum = Study, var.eff.size = vi,
+                       rho = .8, small = TRUE)
+print(lit.age)
+sensitivity(lit.age)
+```
+
+#### Literacy model - Sequence complexity
+
+```{r echo = T}
+# Overall model with dependencies: general model
+
+lit.seq.complexity <- robu(formula = yi ~ -1 + as.factor(Seq_complexity), data = Data_literacy[Data_literacy$Seq_complexity == "FOC" | Data_literacy$Seq_complexity == "SOC", ],
+                       studynum = Study, var.eff.size = vi,
+                       rho = .8, small = TRUE)
+
+print(lit.seq.complexity)
+sensitivity(lit.seq.complexity)
+
+#test overall sequence complexity effect (i.e. do estimates differ from zero)
+Wald_test(lit.seq.complexity, constraints = matrix(c(1,0,0,1),2,2), vcov = "CR2", tidy = TRUE)
+
+#run pairwise comparisons between sequence complexity  (i.e. do estimates differ from each other)
+Wald_test(lit.seq.complexity, constraints = constrain_equal(c(1,2)), vcov = "CR2", tidy = TRUE)
+
+```
+
+#### Literacy model - Session
+
+```{r echo = T}
+# Overall model with dependencies: general model
+
+table(Data_literacy$Time, Data_literacy$Variable) # third session is removed as there are not enough effect sizes
+
+lit.session <- robu(formula = yi ~ Time-1, data = Data_literacy[Data_literacy$Time != 3,],
+                       studynum = Study, var.eff.size = vi,
+                       rho = .8, small = TRUE)
+print(lit.session)
+sensitivity(lit.session)
+
+#test overall session effect (i.e. do estimates differ from zero)
+Wald_test(lit.session, constraints = matrix(c(1,0,0,1),2,2), vcov = "CR2", tidy = TRUE)
+
+#run pairwise comparisons between sessions (i.e. do estimates differ from each other)
+Wald_test(lit.session, constraints = constrain_equal(1:2), vcov = "CR2", tidy = TRUE)
+```
+
+#### Literacy model - number of trials
+
+```{r echo = T}
+# Overall model with dependencies: general model
+
+
+lit.trials <- robu(formula = yi ~ Trial_no, data = Data_literacy,
+                       studynum = Study, var.eff.size = vi,
+                       rho = .8, small = TRUE)
+print(lit.trials)
+sensitivity(lit.trials)
+```
+
+#### Literacy model - Type of sequence
+
+```{r echo = T}
+# Overall model with dependencies: general model
+
+lit.seq.type <- robu(formula = yi ~ -1 + as.factor(Seq_type), data = Data_literacy,
+                       studynum = Study, var.eff.size = vi,
+                       rho = .8, small = TRUE)
+print(lit.seq.type)
+sensitivity(lit.seq.type)
+
+#test overall SRT type effect (is the estimate for each group different from zero)
+Wald_test(lit.seq.type, constraints = matrix(c(1,0,0,0,1,0,0,0,1),3,3), vcov = "CR2", tidy = TRUE)
+
+#run comparisons between types of sequence (are the estimates difference from each other)
+V_lit.seq.type <- vcovCR(lit.seq.type, type = "CR2")
+Wald_test(lit.seq.type, constraints = constrain_equal(1:2), vcov = V_lit.seq.type)
+```
+
+### Literacy components - comparison between groups {.tabset}
+
+#### reading model - group as predictor
+
+```{r echo = T}
+
+table(Data_reading$Group, Data_reading$Component)
+
+reading.model <- robu(formula = yi ~ 0 + Group, data = Data_reading,
+                       studynum = Study, var.eff.size = vi,
+                       rho = .8, small = TRUE)
+print(reading.model)
+sensitivity(reading.model)
+
+#test overall group effect (i.e. do estimates differ from zero)
+Wald_test(reading.model, constraints = matrix(c(1,0,0,0,1,0,0,0,1),3,3), vcov = "CR2",tidy = TRUE)
+
+#run pairwise comparisons between groups (i.e. do estimates differ from each other)
+V_reading.model <- vcovCR(reading.model, type = "CR2") 
+Wald_test(reading.model, constraints = constrain_pairwise(1:3), vcov = V_reading.model)
+```
+
+#### spelling model - group as predictor
+
+```{r echo = T}
+
+table(Data_spelling$Group, Data_spelling$Component)
+
+spelling.model <- robu(formula = yi ~ 0 + Group, data = Data_spelling[Data_spelling$Group != 'DLD',],
+                       studynum = Study, var.eff.size = vi,
+                       rho = .8, small = TRUE)
+
+print(spelling.model)
+sensitivity(spelling.model)
+
+#test overall component effect (i.e. do estimates differ from zero)
+Wald_test(spelling.model, constraints = matrix(c(1,0,0,1),2,2), vcov = "CR2",tidy = TRUE)
+
+#run pairwise comparisons between components (i.e. do estimates differ from each other)
+Wald_test(spelling.model, constraints = constrain_equal(1:2), vcov = "CR2", tidy = TRUE)
+```
+
+```{r}
+#stargazer(g, z,  type="html", out="models.htm")
+```
+
+# Summary table
+
+Disattenuation using Spearman's formula [@spearman1904]
+
+```{r}
+#res.table <- read_excel("subgroup analysis - correlational meta.xlsx")
+
+#res.table$r <-  apply(res.table["z'"], 1, function(x) ztor(x))
+
+#rxx <- 0.3095069
+#res.table$R <-  apply(res.table["r"], 1, function(x) Disat(x, rxx))
+
+#write.csv(res.table, "MA.table.csv")
+```
+
+# Session information
+
+sessionInfo()
+

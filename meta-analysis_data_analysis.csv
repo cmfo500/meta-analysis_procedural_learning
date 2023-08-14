@@ -1,0 +1,503 @@
+Time,Study.no,Study,Authors,Year,N,Age,Variable,Component,Task,Cor,Group,Seq_type,Seq_complexity,Trial_no,Response
+1,1,Clark and Lum (2017a),Clark and Lum ,2017a,20,8.920833333,Language,Grammar,Sentence Comprehension Task (Rt),0.07,DLD,deterministic,FOC,240,keyboard
+1,1,Clark and Lum (2017a),Clark and Lum ,2017a,20,8.920833333,Literacy,Reading,Sentence Comprehension Task (Rt),0.15,DLD,deterministic,FOC,240,keyboard
+1,1,Clark and Lum (2017a),Clark and Lum ,2017a,20,8.920833333,Literacy,Reading,Word Reading,0.23,DLD,deterministic,FOC,240,keyboard
+1,1,Clark and Lum (2017a),Clark and Lum ,2017a,20,8.920833333,Literacy,Reading,Nonword Reading,0.34,DLD,deterministic,FOC,240,keyboard
+1,1,Clark and Lum (2017a),Clark and Lum ,2017a,20,9.089166667,Language,Grammar,Grammatical Skills (Rt),0.48,TD,deterministic,FOC,240,keyboard
+1,1,Clark and Lum (2017a),Clark and Lum ,2017a,20,9.089166667,Literacy,Reading,Word Recognition Task (Rt),0.18,TD,deterministic,FOC,240,keyboard
+1,1,Clark and Lum (2017a),Clark and Lum ,2017a,20,9.089166667,Literacy,Reading,Word Reading,-0.24,TD,deterministic,FOC,240,keyboard
+1,1,Clark and Lum (2017a),Clark and Lum ,2017a,20,9.089166667,Literacy,Reading,Nonword Reading,-0.37,TD,deterministic,FOC,240,keyboard
+1,2,Deroost et al. (2010),Deroost et al. ,2010,28,13.5,Literacy,Composite,Literacy Composite: Psycholinguistic Quotient,-0.15,DD,deterministic,FOC,1500,keyboard
+1,2,Deroost et al. (2010),Deroost et al. ,2010,28,13.5,Literacy,Composite,Literacy Composite: Psycholinguistic Quotient,0.28,DD,deterministic,SOC,1500,keyboard
+1,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.54,Language,Phonology,Phonological Reception,0.053,TD,deterministic,FOC,840,touchscreen
+1,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.54,Language,Phonology,Simple Nonword Repetition,0.136,TD,deterministic,FOC,840,touchscreen
+1,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.54,Language,Phonology,Complex Nonword Repetition,-0.052,TD,deterministic,FOC,840,touchscreen
+1,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.54,Language,Vocabulary,Lexical Reception,0.151,TD,deterministic,FOC,840,touchscreen
+1,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.54,Language,Vocabulary,Picture Naming,0.012,TD,deterministic,FOC,840,touchscreen
+1,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.54,Language,Grammar,Morphosyntactic Comprehension,0.466,TD,deterministic,FOC,840,touchscreen
+1,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.54,Language,Grammar,Sentence Repetition (Syntax Index),-0.102,TD,deterministic,FOC,840,touchscreen
+1,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.54,Language,Grammar,Sentence Repetition (Inflectional Morphology Index),-0.043,TD,deterministic,FOC,840,touchscreen
+1,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.2,Language,Phonology,Phonological Reception,0.217,DLD,deterministic,FOC,840,touchscreen
+1,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.2,Language,Phonology,Simple Nonword Repetition,-0.105,DLD,deterministic,FOC,840,touchscreen
+1,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.2,Language,Phonology,Complex Nonword Repetition,-0.428,DLD,deterministic,FOC,840,touchscreen
+1,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.2,Language,Vocabulary,Lexical Reception,0.3086,DLD,deterministic,FOC,840,touchscreen
+1,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.2,Language,Vocabulary,Picture Naming,0.219,DLD,deterministic,FOC,840,touchscreen
+1,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.2,Language,Grammar,Morphosyntactic Comprehension,-0.309,DLD,deterministic,FOC,840,touchscreen
+1,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.2,Language,Grammar,Sentence Repetition (Syntax Index),-0.241,DLD,deterministic,FOC,840,touchscreen
+1,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.2,Language,Grammar,Sentence Repetition (Inflectional Morphology Index),-0.317,DLD,deterministic,FOC,840,touchscreen
+2,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.54,Language,Phonology,Phonological Reception,0.2361,TD,deterministic,FOC,1008,touchscreen
+2,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.54,Language,Phonology,Simple Nonword Repetition,0.099,TD,deterministic,FOC,1008,touchscreen
+2,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.54,Language,Phonology,Complex Nonword Repetition,0.039,TD,deterministic,FOC,1008,touchscreen
+2,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.54,Language,Vocabulary,Lexical Reception,-0.003,TD,deterministic,FOC,1008,touchscreen
+2,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.54,Language,Vocabulary,Picture Naming,0.388,TD,deterministic,FOC,1008,touchscreen
+2,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.54,Language,Grammar,Morphosyntactic Comprehension,0.721,TD,deterministic,FOC,1008,touchscreen
+2,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.54,Language,Grammar,Sentence Repetition (Syntax Index),-0.132,TD,deterministic,FOC,1008,touchscreen
+2,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.54,Language,Grammar,Sentence Repetition (Inflectional Morphology Index),0.149,TD,deterministic,FOC,1008,touchscreen
+2,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.2,Language,Phonology,Phonological Reception,0.469,DLD,deterministic,FOC,1008,touchscreen
+2,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.2,Language,Phonology,Simple Nonword Repetition,-0.063,DLD,deterministic,FOC,1008,touchscreen
+2,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.2,Language,Phonology,Complex Nonword Repetition,0.287,DLD,deterministic,FOC,1008,touchscreen
+2,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.2,Language,Vocabulary,Lexical Reception,0.493,DLD,deterministic,FOC,1008,touchscreen
+2,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.2,Language,Vocabulary,Picture Naming,-0.254,DLD,deterministic,FOC,1008,touchscreen
+2,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.2,Language,Grammar,Morphosyntactic Comprehension,-0.215,DLD,deterministic,FOC,1008,touchscreen
+2,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.2,Language,Grammar,Sentence Repetition (Syntax Index),-0.319,DLD,deterministic,FOC,1008,touchscreen
+2,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.2,Language,Grammar,Sentence Repetition (Inflectional Morphology Index),-0.385,DLD,deterministic,FOC,1008,touchscreen
+3,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.54,Language,Phonology,Phonological Reception,0.244,TD,deterministic,FOC,1176,touchscreen
+3,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.54,Language,Phonology,Simple Nonword Repetition,0.1239,TD,deterministic,FOC,1176,touchscreen
+3,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.54,Language,Phonology,Complex Nonword Repetition,0.147,TD,deterministic,FOC,1176,touchscreen
+3,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.54,Language,Vocabulary,Lexical Reception,0.238,TD,deterministic,FOC,1176,touchscreen
+3,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.54,Language,Vocabulary,Picture Naming,0.268,TD,deterministic,FOC,1176,touchscreen
+3,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.54,Language,Grammar,Morphosyntactic Comprehension,0.669,TD,deterministic,FOC,1176,touchscreen
+3,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.54,Language,Grammar,Sentence Repetition (Syntax Index),-0.0704,TD,deterministic,FOC,1176,touchscreen
+3,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.54,Language,Grammar,Sentence Repetition (Inflectional Morphology Index),0.228,TD,deterministic,FOC,1176,touchscreen
+3,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.2,Language,Phonology,Phonological Reception,0.111,DLD,deterministic,FOC,1176,touchscreen
+3,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.2,Language,Phonology,Simple Nonword Repetition,-0.021,DLD,deterministic,FOC,1176,touchscreen
+3,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.2,Language,Phonology,Complex Nonword Repetition,-0.186,DLD,deterministic,FOC,1176,touchscreen
+3,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.2,Language,Vocabulary,Lexical Reception,0.243,DLD,deterministic,FOC,1176,touchscreen
+3,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.2,Language,Vocabulary,Picture Naming,0.123,DLD,deterministic,FOC,1176,touchscreen
+3,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.2,Language,Grammar,Morphosyntactic Comprehension,-0.078,DLD,deterministic,FOC,1176,touchscreen
+3,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.2,Language,Grammar,Sentence Repetition (Syntax Index),-0.279,DLD,deterministic,FOC,1176,touchscreen
+3,3,Desmottes et al. (2016),Desmottes et al. ,2016,21,10.2,Language,Grammar,Sentence Repetition (Inflectional Morphology Index),-0.393,DLD,deterministic,FOC,1176,touchscreen
+1,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,17,10.1175,Language,Phonology,Phonological Reception,-0.189,TD,deterministic,FOC,504,touchscreen
+1,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,17,10.1175,Language,Phonology,Simple Nonword Repetition,-0.055,TD,deterministic,FOC,504,touchscreen
+1,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,17,10.1175,Language,Phonology,Complex Nonword Repetition,-0.107,TD,deterministic,FOC,504,touchscreen
+1,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,17,10.1175,Language,Vocabulary,Lexical Reception,-0.1,TD,deterministic,FOC,504,touchscreen
+1,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,17,10.1175,Language,Vocabulary,Lexical Production,-0.342,TD,deterministic,FOC,504,touchscreen
+1,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,17,10.1175,Language,Grammar,Sentence Comprehension,-0.089,TD,deterministic,FOC,504,touchscreen
+1,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,17,10.1175,Language,Grammar,Sentence Repetition (Morphology),0.037,TD,deterministic,FOC,504,touchscreen
+1,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,17,10.1175,Language,Grammar,Sentence Repetition (Syntax),0.065,TD,deterministic,FOC,504,touchscreen
+1,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,18,10.23583333,Language,Phonology,Phonological Reception,0.077,DLD,deterministic,FOC,504,touchscreen
+1,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,18,10.23583333,Language,Phonology,Simple Nonword Repetition,-0.053,DLD,deterministic,FOC,504,touchscreen
+1,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,18,10.23583333,Language,Phonology,Complex Nonword Repetition,0.271,DLD,deterministic,FOC,504,touchscreen
+1,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,18,10.23583333,Language,Vocabulary,Lexical Reception,0.38,DLD,deterministic,FOC,504,touchscreen
+1,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,18,10.23583333,Language,Vocabulary,Lexical Production,0.311,DLD,deterministic,FOC,504,touchscreen
+1,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,18,10.23583333,Language,Grammar,Sentence Comprehension,0.211,DLD,deterministic,FOC,504,touchscreen
+1,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,18,10.23583333,Language,Grammar,Sentence Repetition (Morphology),0.208,DLD,deterministic,FOC,504,touchscreen
+1,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,18,10.23583333,Language,Grammar,Sentence Repetition (Syntax),0.282,DLD,deterministic,FOC,504,touchscreen
+2,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,17,10.1175,Language,Phonology,Phonological Reception,-0.289,TD,deterministic,FOC,672,touchscreen
+2,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,17,10.1175,Language,Phonology,Simple Nonword Repetition,0.085,TD,deterministic,FOC,672,touchscreen
+2,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,17,10.1175,Language,Phonology,Complex Nonword Repetition,-0.132,TD,deterministic,FOC,672,touchscreen
+2,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,17,10.1175,Language,Vocabulary,Lexical Reception,0.022,TD,deterministic,FOC,672,touchscreen
+2,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,17,10.1175,Language,Vocabulary,Lexical Production,0.272,TD,deterministic,FOC,672,touchscreen
+2,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,17,10.1175,Language,Grammar,Sentence Comprehension,-0.36,TD,deterministic,FOC,672,touchscreen
+2,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,17,10.1175,Language,Grammar,Sentence Repetition (Morphology),0.282,TD,deterministic,FOC,672,touchscreen
+2,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,17,10.1175,Language,Grammar,Sentence Repetition (Syntax),-0.146,TD,deterministic,FOC,672,touchscreen
+2,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,18,10.23583333,Language,Phonology,Phonological Reception,-0.186,DLD,deterministic,FOC,672,touchscreen
+2,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,18,10.23583333,Language,Phonology,Simple Nonword Repetition,-0.019,DLD,deterministic,FOC,672,touchscreen
+2,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,18,10.23583333,Language,Phonology,Complex Nonword Repetition,-0.154,DLD,deterministic,FOC,672,touchscreen
+2,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,18,10.23583333,Language,Vocabulary,Lexical Reception,0.223,DLD,deterministic,FOC,672,touchscreen
+2,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,18,10.23583333,Language,Vocabulary,Lexical Production,-0.171,DLD,deterministic,FOC,672,touchscreen
+2,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,18,10.23583333,Language,Grammar,Sentence Comprehension,0.201,DLD,deterministic,FOC,672,touchscreen
+2,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,18,10.23583333,Language,Grammar,Sentence Repetition (Morphology),-0.142,DLD,deterministic,FOC,672,touchscreen
+2,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,18,10.23583333,Language,Grammar,Sentence Repetition (Syntax),0.084,DLD,deterministic,FOC,672,touchscreen
+3,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,17,10.1175,Language,Phonology,Phonological Reception,-0.407,TD,deterministic,FOC,840,touchscreen
+3,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,17,10.1175,Language,Phonology,Simple Nonword Repetition,0.014,TD,deterministic,FOC,840,touchscreen
+3,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,17,10.1175,Language,Phonology,Complex Nonword Repetition,0.062,TD,deterministic,FOC,840,touchscreen
+3,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,17,10.1175,Language,Vocabulary,Lexical Reception,0.115,TD,deterministic,FOC,840,touchscreen
+3,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,17,10.1175,Language,Vocabulary,Lexical Production,0.186,TD,deterministic,FOC,840,touchscreen
+3,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,17,10.1175,Language,Grammar,Sentence Comprehension,-0.309,TD,deterministic,FOC,840,touchscreen
+3,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,17,10.1175,Language,Grammar,Sentence Repetition (Morphology),0.216,TD,deterministic,FOC,840,touchscreen
+3,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,17,10.1175,Language,Grammar,Sentence Repetition (Syntax),-0.109,TD,deterministic,FOC,840,touchscreen
+3,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,18,10.23583333,Language,Phonology,Phonological Reception,0.033,DLD,deterministic,FOC,840,touchscreen
+3,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,18,10.23583333,Language,Phonology,Simple Nonword Repetition,-0.3,DLD,deterministic,FOC,840,touchscreen
+3,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,18,10.23583333,Language,Phonology,Complex Nonword Repetition,-0.411,DLD,deterministic,FOC,840,touchscreen
+3,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,18,10.23583333,Language,Vocabulary,Lexical Reception,-0.007,DLD,deterministic,FOC,840,touchscreen
+3,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,18,10.23583333,Language,Vocabulary,Lexical Production,-0.22,DLD,deterministic,FOC,840,touchscreen
+3,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,18,10.23583333,Language,Grammar,Sentence Comprehension,0.094,DLD,deterministic,FOC,840,touchscreen
+3,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,18,10.23583333,Language,Grammar,Sentence Repetition (Morphology),-0.245,DLD,deterministic,FOC,840,touchscreen
+3,4,Desmottes et al. (2017a),Desmottes et al. ,2017a,18,10.23583333,Language,Grammar,Sentence Repetition (Syntax),-0.27,DLD,deterministic,FOC,840,touchscreen
+3 & 4,5,Desmottes et al. (2017b),Desmottes et al. ,2017b,15,10.38333333,Language,Phonology,Phonological Discrimination,-0.163,DLD,deterministic,FOC,1148,touchscreen
+3 & 4,5,Desmottes et al. (2017b),Desmottes et al. ,2017b,15,10.38333333,Language,Vocabulary,Peabody Picture Vocabulary Test,0.022,DLD,deterministic,FOC,1148,touchscreen
+3 & 4,5,Desmottes et al. (2017b),Desmottes et al. ,2017b,15,10.38333333,Language,Grammar,Sentence Comprehension,-0.018,DLD,deterministic,FOC,1148,touchscreen
+3 & 4,5,Desmottes et al. (2017b),Desmottes et al. ,2017b,15,10.38333333,Language,Grammar,Sentence Repetition (Inflexional Morphology),0.338,DLD,deterministic,FOC,1148,touchscreen
+3 & 4,5,Desmottes et al. (2017b),Desmottes et al. ,2017b,15,10.42166667,Language,Phonology,Phonological Discrimination,0.234,TD,deterministic,FOC,1148,touchscreen
+3 & 4,5,Desmottes et al. (2017b),Desmottes et al. ,2017b,15,10.42166667,Language,Vocabulary,Peabody Picture Vocabulary Test,0.116,TD,deterministic,FOC,1148,touchscreen
+3 & 4,5,Desmottes et al. (2017b),Desmottes et al. ,2017b,15,10.42166667,Language,Grammar,Sentence Comprehension,0.642,TD,deterministic,FOC,1148,touchscreen
+3 & 4,5,Desmottes et al. (2017b),Desmottes et al. ,2017b,15,10.42166667,Language,Grammar,Sentence Repetition (Inflexional Morphology),0.318,TD,deterministic,FOC,1148,touchscreen
+3 & 4,5,Desmottes et al. (2017b),Desmottes et al. ,2017b,15,10.405,Language,Phonology,Phonological Discrimination,0.075,DLD,deterministic,FOC,1148,touchscreen
+3 & 4,5,Desmottes et al. (2017b),Desmottes et al. ,2017b,15,10.405,Language,Vocabulary,Peabody Picture Vocabulary Test,-0.107,DLD,deterministic,FOC,1148,touchscreen
+3 & 4,5,Desmottes et al. (2017b),Desmottes et al. ,2017b,15,10.405,Language,Grammar,Sentence Comprehension,0.224,DLD,deterministic,FOC,1148,touchscreen
+3 & 4,5,Desmottes et al. (2017b),Desmottes et al. ,2017b,15,10.405,Language,Grammar,Sentence Repetition (Inflexional Morphology),-0.078,DLD,deterministic,FOC,1148,touchscreen
+3 & 4,5,Desmottes et al. (2017b),Desmottes et al. ,2017b,15,10.39416667,Language,Phonology,Phonological Discrimination,-0.13,TD,deterministic,FOC,1148,touchscreen
+3 & 4,5,Desmottes et al. (2017b),Desmottes et al. ,2017b,15,10.39416667,Language,Vocabulary,Peabody Picture Vocabulary Test,-0.464,TD,deterministic,FOC,1148,touchscreen
+3 & 4,5,Desmottes et al. (2017b),Desmottes et al. ,2017b,15,10.39416667,Language,Grammar,Sentence Comprehension,0.667,TD,deterministic,FOC,1148,touchscreen
+3 & 4,5,Desmottes et al. (2017b),Desmottes et al. ,2017b,15,10.39416667,Language,Grammar,Sentence Repetition (Inflexional Morphology),0.596,TD,deterministic,FOC,1148,touchscreen
+1,6,Gabriel et al. (2011),Gabriel et al. ,2011,15,10.16666667,Language,Grammar,Receptive Grammar,-0.27,DLD,probabilistic,SOC,832,touchscreen
+1,6,Gabriel et al. (2011),Gabriel et al. ,2011,15,10.16666667,Language,Composite,Sentence Production + Word Repetition,-0.44,DLD,probabilistic,SOC,832,touchscreen
+1,6,Gabriel et al. (2011),Gabriel et al. ,2011,15,10.16666667,Language,Vocabulary,Receptive Vocabulary,-0.32,DLD,probabilistic,SOC,832,touchscreen
+1,6,Gabriel et al. (2011),Gabriel et al. ,2011,15,10.25,Language,Grammar,Sentence Production,0.18,TD,probabilistic,SOC,832,touchscreen
+1,6,Gabriel et al. (2011),Gabriel et al. ,2011,15,10.25,Language,Vocabulary,Receptive Vocabulary,0.19,TD,probabilistic,SOC,832,touchscreen
+1,7,Gabriel et al. (2013),Gabriel et al. ,2013,23,9.583333333,Language,Vocabulary,Receptive Vocabulary,0.27,TD,deterministic,SOC,672,touchscreen
+1,7,Gabriel et al. (2013),Gabriel et al. ,2013,23,9.583333333,Language,Grammar,Receptive Grammar,0.25,TD,deterministic,SOC,672,touchscreen
+1,7,Gabriel et al. (2013),Gabriel et al. ,2013,23,9.583333333,Language,Grammar,Expressive Grammar,0.11,TD,deterministic,SOC,672,touchscreen
+1,7,Gabriel et al. (2013),Gabriel et al. ,2013,23,9.666666667,Language,Vocabulary,Receptive Vocabulary,0.33,DLD,deterministic,SOC,672,touchscreen
+1,7,Gabriel et al. (2013),Gabriel et al. ,2013,23,9.666666667,Language,Grammar,Receptive Grammar,0.48,DLD,deterministic,SOC,672,touchscreen
+1,7,Gabriel et al. (2013),Gabriel et al. ,2013,23,9.666666667,Language,Grammar,Expressive Grammar,0.47,DLD,deterministic,SOC,672,touchscreen
+1,8,Gabriel et al. (2015),Gabriel et al. ,2015,16,9.916666667,Language,Grammar,Receptive Grammar,-0.46,DLD,deterministic,FOC,448,touchscreen
+1,8,Gabriel et al. (2015),Gabriel et al. ,2015,16,9.916666667,Language,Composite,Sentence Production + Word Repetition,0.15,DLD,deterministic,FOC,448,touchscreen
+1,8,Gabriel et al. (2015),Gabriel et al. ,2015,16,9.916666667,Language,Vocabulary,Receptive Vocabulary,-0.03,DLD,deterministic,FOC,448,touchscreen
+1,8,Gabriel et al. (2015),Gabriel et al. ,2015,16,9.833333333,Language,Grammar,Receptive Grammar,-0.28,TD,deterministic,FOC,448,touchscreen
+1,8,Gabriel et al. (2015),Gabriel et al. ,2015,16,9.833333333,Language,Vocabulary,Receptive Vocabulary,-0.39,TD,deterministic,FOC,448,touchscreen
+1,9,Henderson & Warmington (2017),Henderson & Warmington ,2017,29,20.31,Literacy,Spelling,Spelling,0.3,TD,deterministic,SOC,360,keyboard
+1,9,Henderson & Warmington (2017),Henderson & Warmington ,2017,29,20.31,Literacy,Reading,Word Reading,0.22,TD,deterministic,SOC,360,keyboard
+1,9,Henderson & Warmington (2017),Henderson & Warmington ,2017,29,20.31,Literacy,Reading,Nonword Reading,0.13,TD,deterministic,SOC,360,keyboard
+1,9,Henderson & Warmington (2017),Henderson & Warmington ,2017,29,20.31,Language,Phonology,Phoneme Elision,0.04,TD,deterministic,SOC,360,keyboard
+1,9,Henderson & Warmington (2017),Henderson & Warmington ,2017,30,21.13,Literacy,Spelling,Spelling,-0.07,DD,deterministic,SOC,360,keyboard
+1,9,Henderson & Warmington (2017),Henderson & Warmington ,2017,30,21.13,Literacy,Reading,Word Reading,-0.03,DD,deterministic,SOC,360,keyboard
+1,9,Henderson & Warmington (2017),Henderson & Warmington ,2017,30,21.13,Literacy,Reading,Nonword Reading,-0.08,DD,deterministic,SOC,360,keyboard
+1,9,Henderson & Warmington (2017),Henderson & Warmington ,2017,30,21.13,Language,Phonology,Phoneme Elision,-0.05,DD,deterministic,SOC,360,keyboard
+1,10,Kidd (2012),Kidd ,2012,100,5.583333333,Language,Vocabulary,Receptive Vocabulary,0.183,TD,deterministic,FOC,300,gamepad
+1,11,Lum et al. (2012),Lum et al. ,2012,51,9.85,Language,Vocabulary,Lexical Abilities Composite,0.233,TD,deterministic,SOC,450,response box
+1,11,Lum et al. (2012),Lum et al. ,2012,51,9.85,Language,Grammar,Grammatical Abilities Composite,0.305,TD,deterministic,SOC,450,response box
+1,11,Lum et al. (2012),Lum et al. ,2012,51,9.8,Language,Vocabulary,Lexical Abilities Composite,-0.008,DLD,deterministic,SOC,450,response box
+1,11,Lum et al. (2012),Lum et al. ,2012,51,9.8,Language,Grammar,Grammatical Abilities Composite,0.112,DLD,deterministic,SOC,450,response box
+1,12,Schmalz et al. (2019),Schmalz et al. ,2019,84,27.7,Literacy,Reading,Word Reading,-0.02,TD,deterministic,NA,192,keyboard
+1,12,Schmalz et al. (2019),Schmalz et al. ,2019,84,27.7,Literacy,Reading,Nonword Reading,0.02,TD,deterministic,NA,192,keyboard
+1,13,Siegelman & Frost (2015),Siegelman & Frost ,2015,76,24.1,Language,Grammar,Syntactic Processing,0.05,TD,probabilistic,SOC,960,keyboard
+1,13,Siegelman & Frost (2015),Siegelman & Frost ,2015,76,24.1,,RAN,Ran Objects,0.09,TD,probabilistic,SOC,960,keyboard
+1,13,Siegelman & Frost (2015),Siegelman & Frost ,2015,76,24.1,,RAN,Ran Letters,-0.1,TD,probabilistic,SOC,960,keyboard
+1,13,Siegelman & Frost (2015),Siegelman & Frost ,2015,76,24.1,,RAN,Ran Digits,0.05,TD,probabilistic,SOC,960,keyboard
+1,14,Spit & Rispens (2018),Spit & Rispens ,2018,25,10.9,Language,Grammar,Relative Clause Comprehension,-0.4284979,TD,deterministic,,360,gamepad
+1,15,West et al. (2019),West et al. ,2019,23,9.805833333,Literacy,Reading,Word Reading,-0.06,DD,probabilistic,SOC,1000,gamepad
+1,15,West et al. (2019),West et al. ,2019,23,9.805833333,Literacy,Reading,Nonword Reading,-0.16,DD,probabilistic,SOC,1000,gamepad
+1,15,West et al. (2019),West et al. ,2019,25,7.616666667,Literacy,Reading,Word Reading,0.19,TD,probabilistic,SOC,1000,gamepad
+1,15,West et al. (2019),West et al. ,2019,25,7.616666667,Literacy,Reading,Nonword Reading,0.08,TD,probabilistic,SOC,1000,gamepad
+1,16,West et al. (2018),West et al. ,2018,101,8.1925,Language,Grammar,Receptive Grammar,-0.03,TD,probabilistic,SOC,500,gamepad
+1,16,West et al. (2018),West et al. ,2018,101,8.1925,Literacy,Composite,Literacy Composite,-0.2,TD,probabilistic,SOC,500,gamepad
+2,16,West et al. (2018),West et al. ,2018,101,8.1925,Language,Grammar,Receptive Grammar,0.03,TD,probabilistic,SOC,1000,gamepad
+2,16,West et al. (2018),West et al. ,2018,101,8.1925,Literacy,Composite,Literacy Composite,0.16,TD,probabilistic,SOC,1000,gamepad
+1,17,West et al. (2021),West et al. ,2021,112,7.675833333,Language,Grammar,Receptive Grammar,0.05,TD,probabilistic,SOC,1000,gamepad
+1,17,West et al. (2021),West et al. ,2021,112,7.675833333,Literacy,Reading,Word Reading,0.07,TD,probabilistic,SOC,1000,gamepad
+1,17,West et al. (2021),West et al. ,2021,112,7.675833333,Literacy,Reading,Nonword Reading,0.05,TD,probabilistic,SOC,1000,gamepad
+2,17,West et al. (2021),West et al. ,2021,112,7.675833333,Language,Grammar,Receptive Grammar,0.32,TD,probabilistic,SOC,2000,gamepad
+2,17,West et al. (2021),West et al. ,2021,112,7.675833333,Literacy,Reading,Word Reading,0.31,TD,probabilistic,SOC,2000,gamepad
+2,17,West et al. (2021),West et al. ,2021,112,7.675833333,Literacy,Reading,Nonword Reading,0.22,TD,probabilistic,SOC,2000,gamepad
+1,18,Gabriel et al. (2012),Gabriel et al. ,2012,15,10.41666667,Language,Vocabulary,Receptive Lexical Abilities,0.34,TD,deterministic,FOC,448,keyboard
+1,18,Gabriel et al. (2012),Gabriel et al. ,2012,15,10.41666667,Language,Grammar,Receptive Grammar,0.28,TD,deterministic,FOC,448,keyboard
+1,18,Gabriel et al. (2012),Gabriel et al. ,2012,15,10.25,Language,Vocabulary,Receptive Lexical Abilities,-0.06,DLD,deterministic,FOC,448,keyboard
+1,18,Gabriel et al. (2012),Gabriel et al. ,2012,15,10.25,Language,Grammar,"Expressive Grammar - Sentence 
+Production",-0.11,DLD,deterministic,FOC,448,keyboard
+1,18,Gabriel et al. (2012),Gabriel et al. ,2012,15,10.25,Language,Grammar,Receptive Grammar,0.27,DLD,deterministic,FOC,448,keyboard
+2,18,Gabriel et al. (2012),Gabriel et al. ,2012,15,10.41666667,Language,Vocabulary,Receptive Lexical Abilities,-0.75,TD,deterministic,FOC,896,touchscreen
+2,18,Gabriel et al. (2012),Gabriel et al. ,2012,15,10.41666667,Language,Grammar,Receptive Grammar,0.24,TD,deterministic,FOC,896,touchscreen
+2,18,Gabriel et al. (2012),Gabriel et al. ,2012,15,10.25,Language,Vocabulary,Receptive Lexical Abilities,0.19,DLD,deterministic,FOC,896,touchscreen
+2,18,Gabriel et al. (2012),Gabriel et al. ,2012,15,10.25,Language,Grammar,"Expressive Grammar - Sentence 
+Production",-0.2,DLD,deterministic,FOC,896,touchscreen
+2,18,Gabriel et al. (2012),Gabriel et al. ,2012,15,10.25,Language,Grammar,Receptive Grammar,-0.18,DLD,deterministic,FOC,896,touchscreen
+1,19,Kuppuraj et al.(2016),Kuppuraj et al.,2016,30,10.68333333,Language,Phonology,Phonology,0.012,TD,deterministic,SOC,680,keyboard
+1,19,Kuppuraj et al.(2016),Kuppuraj et al.,2016,30,10.68333333,Language,Vocabulary,Semantics,0.106,TD,deterministic,SOC,680,keyboard
+1,19,Kuppuraj et al.(2016),Kuppuraj et al.,2016,30,10.68333333,Language,Grammar,Syntax,0.045,TD,deterministic,SOC,680,keyboard
+1,19,Kuppuraj et al.(2016),Kuppuraj et al.,2016,30,11.65,Language,Phonology,Phonology,0.165,DLD,deterministic,SOC,680,keyboard
+1,19,Kuppuraj et al.(2016),Kuppuraj et al.,2016,30,11.65,Language,Vocabulary,Semantics,-0.065,DLD,deterministic,SOC,680,keyboard
+1,19,Kuppuraj et al.(2016),Kuppuraj et al.,2016,30,11.65,Language,Grammar,Syntax,0.165,DLD,deterministic,SOC,680,keyboard
+1,20,van Witteloostuijn et al. (2019),van Witteloostuijn et al. ,2019,50,9.666666667,Literacy,Reading,Word Reading,-0.17,TD,deterministic,FOC,380,gamepad
+1,20,van Witteloostuijn et al. (2019),van Witteloostuijn et al. ,2019,50,9.666666667,Literacy,Reading,Nonword Reading,-0.26,TD,deterministic,FOC,380,gamepad
+1,20,van Witteloostuijn et al. (2019),van Witteloostuijn et al. ,2019,50,9.666666667,Literacy,Spelling,Spelling,-0.12,TD,deterministic,FOC,380,gamepad
+1,20,van Witteloostuijn et al. (2019),van Witteloostuijn et al. ,2019,50,9.666666667,,RAN,Ran Letters,-0.29,TD,deterministic,FOC,380,gamepad
+1,20,van Witteloostuijn et al. (2019),van Witteloostuijn et al. ,2019,50,9.666666667,,RAN,Ran Pictures,-0.17,TD,deterministic,FOC,380,gamepad
+1,20,van Witteloostuijn et al. (2019),van Witteloostuijn et al. ,2019,50,9.666666667,Language,Phonology,Nonword Repetition,0.1,TD,deterministic,FOC,380,gamepad
+1,20,van Witteloostuijn et al. (2019),van Witteloostuijn et al. ,2019,50,9.833333333,Literacy,Reading,Word Reading,0.37,DD,deterministic,FOC,380,gamepad
+1,20,van Witteloostuijn et al. (2019),van Witteloostuijn et al. ,2019,50,9.833333333,Literacy,Reading,Nonword Reading,0.26,DD,deterministic,FOC,380,gamepad
+1,20,van Witteloostuijn et al. (2019),van Witteloostuijn et al. ,2019,50,9.833333333,Literacy,Spelling,Spelling,0.38,DD,deterministic,FOC,380,gamepad
+1,20,van Witteloostuijn et al. (2019),van Witteloostuijn et al. ,2019,50,9.833333333,,RAN,Ran Letters,0.23,DD,deterministic,FOC,380,gamepad
+1,20,van Witteloostuijn et al. (2019),van Witteloostuijn et al. ,2019,50,9.833333333,,RAN,Ran Pictures,0.15,DD,deterministic,FOC,380,gamepad
+1,20,van Witteloostuijn et al. (2019),van Witteloostuijn et al. ,2019,50,9.833333333,Language,Phonology,Nonword Repetition,0.07,DD,deterministic,FOC,380,gamepad
+1,21,Lee & Tomblin (2015),Lee & Tomblin ,2015,23,22.23,Language,Vocabulary,Receptive Vocabulary,-0.421,TD,deterministic,SOC,312,response keypad
+1,21,Lee & Tomblin (2015),Lee & Tomblin ,2015,23,22.23,Language,Grammar,Derivational Morphology,-0.145,TD,deterministic,SOC,312,response keypad
+1,21,Lee & Tomblin (2015),Lee & Tomblin ,2015,23,22.23,Language,Grammar,Sentence Comprehension,-0.42,TD,deterministic,SOC,312,response keypad
+1,21,Lee & Tomblin (2015),Lee & Tomblin ,2015,25,22.14,Language,Vocabulary,Receptive Vocabulary,-0.058,DLD,deterministic,SOC,312,response keypad
+1,21,Lee & Tomblin (2015),Lee & Tomblin ,2015,25,22.14,Language,Grammar,Derivational Morphology,-0.132,DLD,deterministic,SOC,312,response keypad
+1,21,Lee & Tomblin (2015),Lee & Tomblin ,2015,25,22.14,Language,Grammar,Sentence Comprehension,0.359,DLD,deterministic,SOC,312,response keypad
+1,22,Vakil et al.(2015),Vakil et al.,2015,23,12.41,Literacy,Reading,Silent Reading Speed,0.008,DD,deterministic,SOC,756,keyboard
+1,22,Vakil et al.(2015),Vakil et al.,2015,23,12.41,Literacy,Reading,Reading Errors,-0.1,DD,deterministic,SOC,756,keyboard
+1,22,Vakil et al.(2015),Vakil et al.,2015,23,12.41,Literacy,Reading,Pseudoword Rate,-0.4,DD,deterministic,SOC,756,keyboard
+1,22,Vakil et al.(2015),Vakil et al.,2015,23,12.41,Language,Phonology,Phoneme Segmentation,0.354,DD,deterministic,SOC,756,keyboard
+1,22,Vakil et al.(2015),Vakil et al.,2015,23,12.41,Language,Phonology,Phoneme Deletion,-0.7,DD,deterministic,SOC,756,keyboard
+1,22,Vakil et al.(2015),Vakil et al.,2015,23,12.41,,RAN,Ran Numbers,-0.23,DD,deterministic,SOC,756,keyboard
+1,22,Vakil et al.(2015),Vakil et al.,2015,23,12.41,,RAN,Ran Letters,0.257,DD,deterministic,SOC,756,keyboard
+1,22,Vakil et al.(2015),Vakil et al.,2015,30,12.55,Literacy,Reading,Silent Reading Speed,0.073,TD,deterministic,SOC,756,keyboard
+1,22,Vakil et al.(2015),Vakil et al.,2015,30,12.55,Literacy,Reading,Reading Errors,0.016,TD,deterministic,SOC,756,keyboard
+1,22,Vakil et al.(2015),Vakil et al.,2015,30,12.55,Literacy,Reading,Pseudoword Rate,-0.127,TD,deterministic,SOC,756,keyboard
+1,22,Vakil et al.(2015),Vakil et al.,2015,30,12.55,Language,Phonology,Phoneme Segmentation,-0.053,TD,deterministic,SOC,756,keyboard
+1,22,Vakil et al.(2015),Vakil et al.,2015,30,12.55,,RAN,Ran Numbers,-0.043,TD,deterministic,SOC,756,keyboard
+1,22,Vakil et al.(2015),Vakil et al.,2015,30,12.55,,RAN,Ran Letters,0.04,TD,deterministic,SOC,756,keyboard
+1,23,Hedenius et al. (2013),Hedenius et al. ,2013,12,11,Literacy,Reading,Composite Reading (Phonological Decoding And Orthographic Reading),-0.176,DD,alternating,SOC,1700,response box
+1,23,Hedenius et al. (2013),Hedenius et al. ,2013,12,11,Language,Grammar,Receptive Grammar,-0.0032,DD,alternating,SOC,1700,response box
+1,23,Hedenius et al. (2013),Hedenius et al. ,2013,12,11,Language,Phonology,Nonword Repetition,0.2827,DD,alternating,SOC,1700,response box
+1,23,Hedenius et al. (2013),Hedenius et al. ,2013,12,11,Language,Vocabulary,Receptive Vocabulary,-0.0469,DD,alternating,SOC,1700,response box
+1,23,Hedenius et al. (2013),Hedenius et al. ,2013,17,11.1,Literacy,Reading,Composite Reading (Phonological Decoding And Orthographic Reading),-0.0115,TD,alternating,SOC,1700,response box
+1,23,Hedenius et al. (2013),Hedenius et al. ,2013,17,11.1,Language,Grammar,Receptive Grammar,0.2877,TD,alternating,SOC,1700,response box
+1,23,Hedenius et al. (2013),Hedenius et al. ,2013,17,11.1,Language,Phonology,Nonword Repetition,-0.1728,TD,alternating,SOC,1700,response box
+1,23,Hedenius et al. (2013),Hedenius et al. ,2013,17,11.1,Language,Vocabulary,Receptive Vocabulary,-0.0959,TD,alternating,SOC,1700,response box
+2,23,Hedenius et al. (2013),Hedenius et al. ,2013,12,11,Literacy,Reading,Composite Reading (Phonological Decoding And Orthographic Reading),0.398,DD,alternating,SOC,2125,response box
+2,23,Hedenius et al. (2013),Hedenius et al. ,2013,12,11,Language,Grammar,Receptive Grammar,0.0644,DD,alternating,SOC,2125,response box
+2,23,Hedenius et al. (2013),Hedenius et al. ,2013,12,11,Language,Phonology,Nonword Repetition,0.4299,DD,alternating,SOC,2125,response box
+2,23,Hedenius et al. (2013),Hedenius et al. ,2013,12,11,Language,Vocabulary,Receptive Vocabulary,-0.0899,DD,alternating,SOC,2125,response box
+2,23,Hedenius et al. (2013),Hedenius et al. ,2013,17,11.1,Literacy,Reading,Composite Reading (Phonological Decoding And Orthographic Reading),0.232,TD,alternating,SOC,2125,response box
+2,23,Hedenius et al. (2013),Hedenius et al. ,2013,17,11.1,Language,Grammar,Receptive Grammar,0.1607,TD,alternating,SOC,2125,response box
+2,23,Hedenius et al. (2013),Hedenius et al. ,2013,17,11.1,Language,Phonology,Nonword Repetition,-0.3358,TD,alternating,SOC,2125,response box
+2,23,Hedenius et al. (2013),Hedenius et al. ,2013,17,11.1,Language,Vocabulary,Receptive Vocabulary,-0.1699,TD,alternating,SOC,2125,response box
+1,24,Kidd & Kirjavainen (2011),Kidd & Kirjavainen ,2011,120,5.2,Language,Vocabulary,Receptive Vocabulary,-0.035,TD,deterministic,FOC,300,gamepad
+2,25,Gabay et al.(2012),Gabay et al.,2012,12,24.83,Literacy,Reading,Word Reading Accuracy,0.249499,TD,deterministic,SOC,648,keyboard
+2,25,Gabay et al.(2012),Gabay et al.,2012,12,24.83,Literacy,Reading,Word Reading Speed,0.193245,TD,deterministic,SOC,648,keyboard
+2,25,Gabay et al.(2012),Gabay et al.,2012,12,24.83,Literacy,Reading,Nonword Reading Accuracy,-0.000409,TD,deterministic,SOC,648,keyboard
+2,25,Gabay et al.(2012),Gabay et al.,2012,12,24.83,Literacy,Reading,Nonword Reading Speed,0.083411,TD,deterministic,SOC,648,keyboard
+2,25,Gabay et al.(2012),Gabay et al.,2012,12,24.83,,RAN,Ran Numbers,0.436318,TD,deterministic,SOC,648,keyboard
+2,25,Gabay et al.(2012),Gabay et al.,2012,12,24.83,,RAN,Ran Letters,-0.161462,TD,deterministic,SOC,648,keyboard
+2,25,Gabay et al.(2012),Gabay et al.,2012,12,23.58,Literacy,Reading,Word Reading Accuracy,-0.111301,DD,deterministic,SOC,648,keyboard
+2,25,Gabay et al.(2012),Gabay et al.,2012,12,23.58,Literacy,Reading,Word Reading Speed,0.111877,DD,deterministic,SOC,648,keyboard
+2,25,Gabay et al.(2012),Gabay et al.,2012,12,23.58,Literacy,Reading,Nonword Reading Accuracy,-0.145565,DD,deterministic,SOC,648,keyboard
+2,25,Gabay et al.(2012),Gabay et al.,2012,12,23.58,Literacy,Reading,Nonword Reading Speed,-0.115386,DD,deterministic,SOC,648,keyboard
+2,25,Gabay et al.(2012),Gabay et al.,2012,12,23.58,,RAN,Ran Numbers,0.132604,DD,deterministic,SOC,648,keyboard
+2,25,Gabay et al.(2012),Gabay et al.,2012,12,23.58,,RAN,Ran Letters,-0.039906,DD,deterministic,SOC,648,keyboard
+1,26,Park et al. (2018),Park et al. ,2018,59,10.27,Language,Composite,Core Language Score,0.220977181,TD,deterministic,FOC,400,response box
+1,26,Park et al. (2018),Park et al. ,2018,59,10.27,Language,Composite,Receptive Language Index,0.125104446,TD,deterministic,FOC,400,response box
+1,26,Park et al. (2018),Park et al. ,2018,59,10.27,Language,Composite,Expressive Language Index,0.221746138,TD,deterministic,FOC,400,response box
+1,26,Park et al. (2018),Park et al. ,2018,59,10.27,Language,Vocabulary,Receptive Vocabulary,0.123265685,TD,deterministic,FOC,400,response box
+1,26,Park et al. (2018),Park et al. ,2018,59,10.27,Language,Vocabulary,Expressive Vocabulary,0.175738329,TD,deterministic,FOC,400,response box
+1,26,Park et al. (2018),Park et al. ,2018,27,9.95,Language,Composite,Core Language Score,-0.208767204,DLD,deterministic,FOC,400,response box
+1,26,Park et al. (2018),Park et al. ,2018,27,9.95,Language,Composite,Receptive Language Index,0.076299323,DLD,deterministic,FOC,400,response box
+1,26,Park et al. (2018),Park et al. ,2018,27,9.95,Language,Composite,Expressive Language Index,-0.320864417,DLD,deterministic,FOC,400,response box
+1,26,Park et al. (2018),Park et al. ,2018,27,9.95,Language,Vocabulary,Receptive Vocabulary,0.148961788,DLD,deterministic,FOC,400,response box
+1,26,Park et al. (2018),Park et al. ,2018,27,9.95,Language,Vocabulary,Expressive Vocabulary,-0.268349947,DLD,deterministic,FOC,400,response box
+1,27,Mayor-Dubois et al. (2014),Mayor-Dubois et al. ,2014,65,18,,RAN,Ran,0.65,DLD,deterministic,FOC,420,keyboard
+1,27,Mayor-Dubois et al. (2014),Mayor-Dubois et al. ,2014,65,18,Language,Phonology,Phonological Awareness,0.49,DLD,deterministic,FOC,420,keyboard
+1,28,Stoodley et al.(2006),Stoodley et al.,2006,21,22.83333333,Literacy,Composite,Literacy Composite,-0.215,TD,deterministic,SOC,300,button box
+1,28,Stoodley et al.(2006),Stoodley et al.,2006,21,22.83333333,Literacy,Spelling,Orthographic Accuracy,0.034,TD,deterministic,SOC,300,button box
+1,28,Stoodley et al.(2006),Stoodley et al.,2006,21,22.83333333,Literacy,Spelling,Orthographic Rt,0.204,TD,deterministic,SOC,300,button box
+1,28,Stoodley et al.(2006),Stoodley et al.,2006,21,22.83333333,Language,Phonology,Phonological Accuracy,-0.353,TD,deterministic,SOC,300,button box
+1,28,Stoodley et al.(2006),Stoodley et al.,2006,21,22.83333333,Language,Phonology,Phonological Rt,0.18,TD,deterministic,SOC,300,button box
+1,28,Stoodley et al.(2006),Stoodley et al.,2006,19,23.916666,Literacy,Composite,Literacy Composite,0.719,DD,deterministic,SOC,300,button box
+1,28,Stoodley et al.(2006),Stoodley et al.,2006,19,23.916666,Literacy,Spelling,Orthographic Accuracy,0.371,DD,deterministic,SOC,300,button box
+1,28,Stoodley et al.(2006),Stoodley et al.,2006,19,23.916666,Literacy,Spelling,Orthographic Rt,0.396,DD,deterministic,SOC,300,button box
+1,28,Stoodley et al.(2006),Stoodley et al.,2006,19,23.916666,Language,Phonology,Phonological Accuracy,0.225,DD,deterministic,SOC,300,button box
+1,28,Stoodley et al.(2006),Stoodley et al.,2006,19,23.916666,Language,Phonology,Phonological Rt,0.295,DD,deterministic,SOC,300,button box
+1,29,Lukács & Kemény (2014),Lukács & Kemény ,2014,29,9.1,Language,Grammar,Receptive Grammar (Correct Items),-0.069,DLD,deterministic,FOC,720,keyboard
+1,29,Lukács & Kemény (2014),Lukács & Kemény ,2014,29,9.1,Language,Vocabulary,Receptive Vocabulary,0.058,DLD,deterministic,FOC,720,keyboard
+1,29,Lukács & Kemény (2014),Lukács & Kemény ,2014,29,9.1,Language,Grammar,Sentence Recalling,-0.069,DLD,deterministic,FOC,720,keyboard
+1,29,Lukács & Kemény (2014),Lukács & Kemény ,2014,29,9.1,Language,Phonology,Nonword Repetition,0.051,DLD,deterministic,FOC,720,keyboard
+1,30,Lum & Kidd (2012),Lum & Kidd ,2012,58,5.448333333,Language,Grammar,Regular Past Tense,0.115,TD,deterministic,FOC,300,gamepad
+1,30,Lum & Kidd (2012),Lum & Kidd ,2012,58,5.448333333,Language,Grammar,Irregular Past Tense,-0.007,TD,deterministic,FOC,300,gamepad
+1,31,Lammertink et al. (2020),Lammertink et al. ,2020,35,9.0833,Language,Grammar,Sentence Recalling,-0.33,DLD,deterministic,FOC,380,gamepad
+1,31,Lammertink et al. (2020),Lammertink et al. ,2020,35,9.0833,Literacy,Spelling,Spelling,-0.2771683,DLD,deterministic,FOC,380,gamepad
+1,31,Lammertink et al. (2020),Lammertink et al. ,2020,35,9.0833,Literacy,Reading,Nonword Reading,0.09144984,DLD,deterministic,FOC,380,gamepad
+1,31,Lammertink et al. (2020),Lammertink et al. ,2020,35,9.0833,Literacy,Reading,Word Reading,0.0412682,DLD,deterministic,FOC,380,gamepad
+1,31,Lammertink et al. (2020),Lammertink et al. ,2020,35,9.0833,Language,Grammar,Sentence Recalling,0.18,TD,deterministic,FOC,380,gamepad
+1,31,Lammertink et al. (2020),Lammertink et al. ,2020,35,9.0833,Literacy,Spelling,Spelling,-0.1251816,TD,deterministic,FOC,380,gamepad
+1,31,Lammertink et al. (2020),Lammertink et al. ,2020,35,9.0833,Literacy,Reading,Nonword Reading,-0.1029275,TD,deterministic,FOC,380,gamepad
+1,31,Lammertink et al. (2020),Lammertink et al. ,2020,35,9.0833,Literacy,Reading,Word Reading,0.03835598,TD,deterministic,FOC,380,gamepad
+1,32,Mimeau et al. (2016),Mimeau et al. ,2016,76,6.5,Language,Grammar,Past Tense Production Task,0.21,TD,deterministic,FOC,450,gamepad
+1,32,Mimeau et al. (2016),Mimeau et al. ,2016,76,6.5,Language,Grammar,Receptive Grammar,0.07,TD,deterministic,FOC,450,gamepad
+1&2,33,Clark & Lum (2017b),Clark & Lum ,2017b,25,9.8125,Language,Grammar,Formulating Sentences (Ss),0.062,DLD,deterministic,FOC,300,keyboard
+1&2,33,Clark & Lum (2017b),Clark & Lum ,2017b,25,9.8125,Language,Grammar,Recalling Sentences (Ss),0.178,DLD,deterministic,FOC,300,keyboard
+1&2,33,Clark & Lum (2017b),Clark & Lum ,2017b,25,9.8125,Language,Grammar,Concepts & Following Directions (Ss),0.371,DLD,deterministic,FOC,300,keyboard
+1&2,33,Clark & Lum (2017b),Clark & Lum ,2017b,25,9.8125,Language,Grammar,Either Word Struc/Classes (Ss),-0.042,DLD,deterministic,FOC,300,keyboard
+1&2,33,Clark & Lum (2017b),Clark & Lum ,2017b,25,9.8125,Language,Grammar,Formulating Sentences (Ss),-0.345,DLD,deterministic,SOC,300,keyboard
+1&2,33,Clark & Lum (2017b),Clark & Lum ,2017b,25,9.8125,Language,Grammar,Recalling Sentences (Ss),0.069,DLD,deterministic,SOC,300,keyboard
+1&2,33,Clark & Lum (2017b),Clark & Lum ,2017b,25,9.8125,Language,Grammar,Concepts & Following Directions (Ss),-0.397,DLD,deterministic,SOC,300,keyboard
+1&2,33,Clark & Lum (2017b),Clark & Lum ,2017b,25,9.8125,Language,Grammar,Either Word Struc/Classes (Ss),0.483,DLD,deterministic,SOC,300,keyboard
+1&2,33,Clark & Lum (2017b),Clark & Lum ,2017b,27,9.696666667,Language,Grammar,Formulating Sentences (Ss),0.004,TD,deterministic,FOC,300,keyboard
+1&2,33,Clark & Lum (2017b),Clark & Lum ,2017b,27,9.696666667,Language,Grammar,Recalling Sentences (Ss),0.002,TD,deterministic,FOC,300,keyboard
+1&2,33,Clark & Lum (2017b),Clark & Lum ,2017b,27,9.696666667,Language,Grammar,Concepts & Following Directions (Ss),0.481,TD,deterministic,FOC,300,keyboard
+1&2,33,Clark & Lum (2017b),Clark & Lum ,2017b,27,9.696666667,Language,Grammar,Either Word Struc/Classes (Ss),0.029,TD,deterministic,FOC,300,keyboard
+1&2,33,Clark & Lum (2017b),Clark & Lum ,2017b,27,9.696666667,Language,Grammar,Formulating Sentences (Ss),0.335,TD,deterministic,SOC,300,keyboard
+1&2,33,Clark & Lum (2017b),Clark & Lum ,2017b,27,9.696666667,Language,Grammar,Recalling Sentences (Ss),-0.091,TD,deterministic,SOC,300,keyboard
+1&2,33,Clark & Lum (2017b),Clark & Lum ,2017b,27,9.696666667,Language,Grammar,Concepts & Following Directions (Ss),0.005,TD,deterministic,SOC,300,keyboard
+1&2,33,Clark & Lum (2017b),Clark & Lum ,2017b,27,9.696666667,Language,Grammar,Either Word Struc/Classes (Ss),-0.332,TD,deterministic,SOC,300,keyboard
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,20,8.9305,Language,Grammar,Trog_Ss,0.179539704,TD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,20,8.9305,Language,Vocabulary,Receptive Vocabulary,-0.204200916,TD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,20,8.9305,Language,Phonology,Nwr_Ss,0.321147595,TD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,20,8.9305,Language,Grammar,Errni_Comprehension Subtest_Ss,-0.519120319,TD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,20,8.9305,Language,Vocabulary,Expressive Vocabulary,0.12233594,TD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,20,8.9305,Language,Grammar,Syntactic Formulation_Ss,-0.221518992,TD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,20,8.9305,Literacy,Reading,Towre_Word_Ss,-0.107927548,TD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,20,8.9305,Literacy,Reading,Towre_Nonword_Ss,0.077592818,TD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,20,8.9305,Language,Grammar,Errni_Mlu_Ss,-0.056183547,TD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,20,8.9305,Language,Grammar,Errni_Story_Ss,-0.401961852,TD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,20,8.9305,Language,Grammar,Errni_Recall_Ss,-0.33102664,TD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,20,8.9305,,RAN,Rapid Naming_Pic_Ss,-0.243111742,TD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,20,8.9305,,RAN,Rapid Naming Digit_Ss,-0.153894122,TD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,28,5.813214,Language,Grammar,Trog_Ss,0.065502263,TD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,28,5.813214,Language,Vocabulary,Bpvs_Ss,-0.020805642,TD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,28,5.813214,Language,Phonology,Nwr_Ss,0.16230583,TD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,28,5.813214,Language,Grammar,Errni_Comp_Ss,-0.117970169,TD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,28,5.813214,Language,Vocabulary,Ace_Naming_Ss,0.446634413,TD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,28,5.813214,Language,Grammar,Syntactic_Ss,-0.268615493,TD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,28,5.813214,Literacy,Reading,Towre_Word_Ss,0.157937487,TD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,28,5.813214,Literacy,Reading,Towre_Nonword_Ss,0.208164306,TD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,28,5.813214,Language,Grammar,Errni_Mlu_Ss,-0.532177109,TD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,28,5.813214,Language,Grammar,Errni_Story_Ss,-0.106199836,TD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,28,5.813214,Language,Grammar,Errni_Recall_Ss,-0.33836669,TD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,28,5.813214,,RAN,Rapid_Pic_Ss,0.310641361,TD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,28,5.813214,,RAN,Rapid_Digit_Ss,0.213054222,TD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,48,8.796875,Language,Grammar,Trog_Ss,0.056643801,DLD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,48,8.796875,Language,Vocabulary,Bpvs_Ss,-0.049598598,DLD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,48,8.796875,Language,Phonology,Nwr_Ss,-0.008243905,DLD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,48,8.796875,Language,Narrative/Language Comprehension,Errni_Comp_Ss,0.166731374,DLD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,48,8.796875,Language,Vocabulary,Ace_Naming_Ss,-0.120603778,DLD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,48,8.796875,Language,Grammar,Syntactic_Ss,-0.061267797,DLD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,48,8.796875,Literacy,Reading,Towre_Word_Ss,0.010388849,DLD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,48,8.796875,Literacy,Reading,Towre_Nonword_Ss,0.038799759,DLD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,48,8.796875,Language,Grammar,Errni_Mlu_Ss,-0.247205379,DLD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,48,8.796875,Language,Grammar,Errni_Story_Ss,0.000564342,DLD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,48,8.796875,Language,Grammar,Errni_Recall_Ss,-0.047700908,DLD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,48,8.796875,,RAN,Rapid_Pic_Ss,-0.060963292,DLD,deterministic,FOC,400,response box
+1,34,Hsu & Bishop(2014),Hsu & Bishop,2014,48,8.796875,,RAN,Rapid_Digit_Ss,-0.016734752,DLD,deterministic,FOC,400,response box
+1,35,Llompart & Dabrowska (2020),Llompart & Dabrowska ,2020,60,21.63,Language,Grammar,Grammaticality Judgement Task,0.2,TD,deterministic,SOC,576,response box
+1,35,Llompart & Dabrowska (2020),Llompart & Dabrowska ,2020,60,21.63,Language,Vocabulary,Receptive Vocabulary,0.34,TD,deterministic,SOC,576,response box
+1,35,Llompart & Dabrowska (2020),Llompart & Dabrowska ,2020,60,21.63,Language,,Collocations,0.28,TD,deterministic,SOC,576,response box
+1,36,Earle & Ullman (2021),Earle & Ullman ,2021,79,20.488,Literacy,Reading,Word Identification,0.24,TD,deterministic,,400,keyboard
+1,36,Earle & Ullman (2021),Earle & Ullman ,2021,79,20.488,Literacy,Reading,Word Attack,0.15,TD,deterministic,,400,keyboard
+1,36,Earle & Ullman (2021),Earle & Ullman ,2021,79,20.488,Literacy,Reading comprehension,Passage Comprehension,0.01,TD,deterministic,,400,keyboard
+1,36,Earle & Ullman (2021),Earle & Ullman ,2021,21,20.488,Literacy,Reading,Word Identification,0.09,DLD,deterministic,,400,keyboard
+1,36,Earle & Ullman (2021),Earle & Ullman ,2021,21,20.488,Literacy,Reading,Word Attack,0.12,DLD,deterministic,,400,keyboard
+1,36,Earle & Ullman (2021),Earle & Ullman ,2021,21,20.488,Literacy,Reading comprehension,Passage Comprehension,-0.12,DLD,deterministic,,400,keyboard
+1,36,Earle & Ullman (2021),Earle & Ullman ,2021,32,18.94,Language,Phonology,Elision,0.04,TD,deterministic,,400,keyboard
+1,36,Earle & Ullman (2021),Earle & Ullman ,2021,32,18.94,Language,Phonology,Blending,0.22,TD,deterministic,,400,keyboard
+1,36,Earle & Ullman (2021),Earle & Ullman ,2021,32,18.94,Language,Phonology,Nonword Repetition,0.3,TD,deterministic,,400,keyboard
+1,36,Earle & Ullman (2021),Earle & Ullman ,2021,32,18.94,Literacy,Reading,Word Reading Fluency,0.11,TD,deterministic,,400,keyboard
+1,36,Earle & Ullman (2021),Earle & Ullman ,2021,32,18.94,Literacy,Reading,Decoding Fluency,0.1,TD,deterministic,,400,keyboard
+2,36,Earle & Ullman (2021),Earle & Ullman ,2021,32,18.94,Language,Phonology,Elision,0.09,TD,deterministic,,400,keyboard
+2,36,Earle & Ullman (2021),Earle & Ullman ,2021,32,18.94,Language,Phonology,Blending,0.01,TD,deterministic,,400,keyboard
+2,36,Earle & Ullman (2021),Earle & Ullman ,2021,32,18.94,Language,Phonology,Nonword Repetition,0.16,TD,deterministic,,400,keyboard
+2,36,Earle & Ullman (2021),Earle & Ullman ,2021,32,18.94,Literacy,Reading,Word Reading Fluency,-0.23,TD,deterministic,,400,keyboard
+2,36,Earle & Ullman (2021),Earle & Ullman ,2021,32,18.94,Literacy,Reading,Decoding Fluency,0.03,TD,deterministic,,400,keyboard
+1,36,Earle & Ullman (2021),Earle & Ullman ,2021,9,19.12,Language,Phonology,Elision,0.17,DLD,deterministic,,400,keyboard
+1,36,Earle & Ullman (2021),Earle & Ullman ,2021,9,19.12,Language,Phonology,Blending,0.26,DLD,deterministic,,400,keyboard
+1,36,Earle & Ullman (2021),Earle & Ullman ,2021,9,19.12,Language,Phonology,Nonword Repetition,0.33,DLD,deterministic,,400,keyboard
+1,36,Earle & Ullman (2021),Earle & Ullman ,2021,9,19.12,Literacy,Reading,Word Reading Fluency,-0.28,DLD,deterministic,,400,keyboard
+2,36,Earle & Ullman (2021),Earle & Ullman ,2021,9,19.12,Literacy,Reading,Decoding Fluency,-0.03,DLD,deterministic,,400,keyboard
+2,36,Earle & Ullman (2021),Earle & Ullman ,2021,79,20.488,Literacy,Reading,Word Identification,0.18,TD,deterministic,,600,keyboard
+2,36,Earle & Ullman (2021),Earle & Ullman ,2021,79,20.488,Literacy,Reading,Word Attack,-0.12,TD,deterministic,,600,keyboard
+2,36,Earle & Ullman (2021),Earle & Ullman ,2021,79,20.488,Literacy,Reading comprehension,Passage Comprehension,0.06,TD,deterministic,,600,keyboard
+2,36,Earle & Ullman (2021),Earle & Ullman ,2021,21,20.52,Literacy,Reading,Word Identification,0.07,DLD,deterministic,,600,keyboard
+2,36,Earle & Ullman (2021),Earle & Ullman ,2021,21,20.52,Literacy,Reading,Word Attack,0.29,DLD,deterministic,,600,keyboard
+2,36,Earle & Ullman (2021),Earle & Ullman ,2021,21,20.52,Literacy,Reading comprehension,Passage Comprehension,-0.07,DLD,deterministic,,600,keyboard
+2,36,Earle & Ullman (2021),Earle & Ullman ,2021,9,19.12,Language,Phonology,Elision,0.54,DLD,deterministic,,600,keyboard
+2,36,Earle & Ullman (2021),Earle & Ullman ,2021,9,19.12,Language,Phonology,Blending,0.71,DLD,deterministic,,600,keyboard
+2,36,Earle & Ullman (2021),Earle & Ullman ,2021,9,19.12,Language,Phonology,Nonword Repetition,0.66,DLD,deterministic,,600,keyboard
+2,36,Earle & Ullman (2021),Earle & Ullman ,2021,9,19.12,Literacy,Reading,Word Reading Fluency,-0.23,DLD,deterministic,,600,keyboard
+2,36,Earle & Ullman (2021),Earle & Ullman ,2021,9,19.12,Literacy,Reading,Decoding Fluency,0.69,DLD,deterministic,,600,keyboard
+1,36,Earle & Ullman (2021),Earle & Ullman ,2021,47,21.54,Language,Phonology,Elision,0.12,TD,deterministic,,600,keyboard
+1,36,Earle & Ullman (2021),Earle & Ullman ,2021,47,21.54,Language,Phonology,Blending,0.22,TD,deterministic,,600,keyboard
+1,36,Earle & Ullman (2021),Earle & Ullman ,2021,47,21.54,Language,Phonology,Nonword Repetition,0.19,TD,deterministic,,600,keyboard
+1,36,Earle & Ullman (2021),Earle & Ullman ,2021,47,21.54,Literacy,Reading,Word Reading Fluency,0.2,TD,deterministic,,600,keyboard
+1,36,Earle & Ullman (2021),Earle & Ullman ,2021,47,21.54,Literacy,Reading,Decoding Fluency,0.2,TD,deterministic,,600,keyboard
+2,36,Earle & Ullman (2021),Earle & Ullman ,2021,47,21.54,Language,Phonology,Elision,0.18,TD,deterministic,,600,keyboard
+2,36,Earle & Ullman (2021),Earle & Ullman ,2021,47,21.54,Language,Phonology,Blending,-0.01,TD,deterministic,,600,keyboard
+2,36,Earle & Ullman (2021),Earle & Ullman ,2021,47,21.54,Language,Phonology,Nonword Repetition,-0.1,TD,deterministic,,600,keyboard
+2,36,Earle & Ullman (2021),Earle & Ullman ,2021,47,21.54,Literacy,Reading,Word Reading Fluency,-0.06,TD,deterministic,,600,keyboard
+2,36,Earle & Ullman (2021),Earle & Ullman ,2021,47,21.54,Literacy,Reading,Decoding Fluency,-0.07,TD,deterministic,,600,keyboard
+1,36,Earle & Ullman (2021),Earle & Ullman ,2021,12,21.51,Language,Phonology,Elision,0,DLD,deterministic,,600,keyboard
+1,36,Earle & Ullman (2021),Earle & Ullman ,2021,12,21.51,Language,Phonology,Blending,0.18,DLD,deterministic,,600,keyboard
+1,36,Earle & Ullman (2021),Earle & Ullman ,2021,12,21.51,Language,Phonology,Nonword Repetition,-0.25,DLD,deterministic,,600,keyboard
+1,36,Earle & Ullman (2021),Earle & Ullman ,2021,12,21.51,Literacy,Reading,Word Reading Fluency,0.3,DLD,deterministic,,600,keyboard
+1,36,Earle & Ullman (2021),Earle & Ullman ,2021,12,21.51,Literacy,Reading,Decoding Fluency,0.23,DLD,deterministic,,600,keyboard
+2,36,Earle & Ullman (2021),Earle & Ullman ,2021,12,21.51,Language,Phonology,Elision,0.06,DLD,deterministic,,600,keyboard
+2,36,Earle & Ullman (2021),Earle & Ullman ,2021,12,21.51,Language,Phonology,Blending,-0.13,DLD,deterministic,,600,keyboard
+2,36,Earle & Ullman (2021),Earle & Ullman ,2021,12,21.51,Language,Phonology,Nonword Repetition,0.21,DLD,deterministic,,600,keyboard
+2,36,Earle & Ullman (2021),Earle & Ullman ,2021,12,21.51,Literacy,Reading,Word Reading Fluency,0.05,DLD,deterministic,,600,keyboard
+2,36,Earle & Ullman (2021),Earle & Ullman ,2021,12,21.51,Literacy,Reading,Decoding Fluency,-0.45,DLD,deterministic,,600,keyboard
+1,37,Oliveira et al. (2022),Oliveira et al. ,2022,47,20.09,Literacy,Reading,Word Reading,0.04,TD,probabilistic,SOC,1000,keyboard
+1,37,Oliveira et al. (2022),Oliveira et al. ,2022,47,20.09,Literacy,Reading,Nonword Reading,0.02,TD,probabilistic,SOC,1000,keyboard
+1,37,Oliveira et al. (2022),Oliveira et al. ,2022,47,20.09,Literacy,Spelling,Spelling,0.2,TD,probabilistic,SOC,1000,keyboard
+1,37,Oliveira et al. (2022),Oliveira et al. ,2022,47,20.09,Language,Vocabulary,Vocabulary,-0.08,TD,probabilistic,SOC,1000,keyboard
+1,37,Oliveira et al. (2022),Oliveira et al. ,2022,47,20.09,Language,Phonology,Nonword Repetition,-0.04,TD,probabilistic,SOC,1000,keyboard
+1,37,Oliveira et al. (2022),Oliveira et al. ,2022,47,20.09,Language,Grammar,Recalling,-0.16,TD,probabilistic,SOC,1000,keyboard
+2,37,Oliveira et al. (2022),Oliveira et al. ,2022,47,20.09,Literacy,Reading,Word Reading,0.014,TD,probabilistic,SOC,2000,keyboard
+2,37,Oliveira et al. (2022),Oliveira et al. ,2022,47,20.09,Literacy,Reading,Nonword Reading,0.08,TD,probabilistic,SOC,2000,keyboard
+2,37,Oliveira et al. (2022),Oliveira et al. ,2022,47,20.09,Literacy,Spelling,Spelling,0.25,TD,probabilistic,SOC,2000,keyboard
+2,37,Oliveira et al. (2022),Oliveira et al. ,2022,47,20.09,Language,Vocabulary,Vocabulary,0.11,TD,probabilistic,SOC,2000,keyboard
+2,37,Oliveira et al. (2022),Oliveira et al. ,2022,47,20.09,Language,Phonology,Nonword Repetition,-0.1,TD,probabilistic,SOC,2000,keyboard
+2,37,Oliveira et al. (2022),Oliveira et al. ,2022,47,20.09,Language,Grammar,Recalling,-0.15,TD,probabilistic,SOC,2000,keyboard
+3,37,Oliveira et al. (2022),Oliveira et al. ,2022,47,20.09,Literacy,Reading,Word Reading,-0.002,TD,probabilistic,SOC,3000,keyboard
+3,37,Oliveira et al. (2022),Oliveira et al. ,2022,47,20.09,Literacy,Reading,Nonword Reading,0.06,TD,probabilistic,SOC,3000,keyboard
+3,37,Oliveira et al. (2022),Oliveira et al. ,2022,47,20.09,Literacy,Spelling,Spelling,0.03,TD,probabilistic,SOC,3000,keyboard
+3,37,Oliveira et al. (2022),Oliveira et al. ,2022,47,20.09,Language,Vocabulary,Vocabulary,0.39,TD,probabilistic,SOC,3000,keyboard
+3,37,Oliveira et al. (2022),Oliveira et al. ,2022,47,20.09,Language,Phonology,Nonword Repetition,-0.24,TD,probabilistic,SOC,3000,keyboard
+3,37,Oliveira et al. (2022),Oliveira et al. ,2022,47,20.09,Language,Grammar,Recalling,-0.29,TD,probabilistic,SOC,3000,keyboard
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Language,Phonology,Paulin Phonological Awareness Test,0.245036,DD,alternating,SOC,425,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Language,Grammar,Trog–2,0.247415,DD,alternating,SOC,425,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Literacy,Reading,Reading Fluency Subtest - Dls,0.018522,DD,alternating,SOC,425,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Literacy,Reading,Nonword Reading - Läst,-0.344029,DD,alternating,SOC,425,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Literacy,Reading,Word Reading - Läst,-0.198792,DD,alternating,SOC,425,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.6,Language,Phonology,Paulin Phonological Awareness Test,0.029534,TD,alternating,SOC,425,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.7,Language,Grammar,Trog–2,0.02125,TD,alternating,SOC,425,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.7,Literacy,Reading,Reading Fluency Subtest - Dls,0.144882,TD,alternating,SOC,425,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.7,Literacy,Reading,Nonword Reading - Läst,0.186357,TD,alternating,SOC,425,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.7,Literacy,Reading,Word Reading - Läst,0.183209,TD,alternating,SOC,425,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Language,Phonology,Paulin Phonological Awareness Test,-0.055204,DD,alternating,SOC,850,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Language,Grammar,Trog–2,0.251522,DD,alternating,SOC,850,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Literacy,Reading,Reading Fluency Subtest - Dls,-0.075692,DD,alternating,SOC,850,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Literacy,Reading,Nonword Reading - Läst,-0.334551,DD,alternating,SOC,850,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Literacy,Reading,Word Reading - Läst,-0.329406,DD,alternating,SOC,850,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.6,Language,Phonology,Paulin Phonological Awareness Test,-0.197488,TD,alternating,SOC,850,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.7,Language,Grammar,Trog–2,-0.089963,TD,alternating,SOC,850,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.7,Literacy,Reading,Reading Fluency Subtest - Dls,-0.094949,TD,alternating,SOC,850,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.7,Literacy,Reading,Nonword Reading - Läst,0.12012,TD,alternating,SOC,850,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.7,Literacy,Reading,Word Reading - Läst,-0.033682,TD,alternating,SOC,850,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Language,Phonology,Paulin Phonological Awareness Test,-0.098531,DD,alternating,SOC,1275,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Language,Grammar,Trog–2,0.137356,DD,alternating,SOC,1275,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Literacy,Reading,Reading Fluency Subtest - Dls,-0.284714,DD,alternating,SOC,1275,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Literacy,Reading,Nonword Reading - Läst,-0.36995,DD,alternating,SOC,1275,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Literacy,Reading,Word Reading - Läst,-0.262816,DD,alternating,SOC,1275,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.6,Language,Phonology,Paulin Phonological Awareness Test,-0.063154,TD,alternating,SOC,1275,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.7,Language,Grammar,Trog–2,-0.146691,TD,alternating,SOC,1275,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.7,Literacy,Reading,Reading Fluency Subtest - Dls,-0.201423,TD,alternating,SOC,1275,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.7,Literacy,Reading,Nonword Reading - Läst,-0.228446,TD,alternating,SOC,1275,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.7,Literacy,Reading,Word Reading - Läst,-0.115414,TD,alternating,SOC,1275,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Language,Phonology,Paulin Phonological Awareness Test,0.039701,DD,alternating,SOC,1700,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Language,Grammar,Trog–2,0.138772,DD,alternating,SOC,1700,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Literacy,Reading,Reading Fluency Subtest - Dls,0.125096,DD,alternating,SOC,1700,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Literacy,Reading,Nonword Reading - Läst,0.102295,DD,alternating,SOC,1700,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Literacy,Reading,Word Reading - Läst,0.045477,DD,alternating,SOC,1700,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.6,Language,Phonology,Paulin Phonological Awareness Test,-0.260645,TD,alternating,SOC,1700,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.7,Language,Grammar,Trog–2,-0.249217,TD,alternating,SOC,1700,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.7,Literacy,Reading,Reading Fluency Subtest - Dls,-0.329586,TD,alternating,SOC,1700,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.7,Literacy,Reading,Nonword Reading - Läst,-0.094177,TD,alternating,SOC,1700,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.7,Literacy,Reading,Word Reading - Läst,-0.142372,TD,alternating,SOC,1700,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Language,Phonology,Paulin Phonological Awareness Test,0.271032,DD,alternating,SOC,2125,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Language,Grammar,Trog–2,0.008193,DD,alternating,SOC,2125,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Literacy,Reading,Reading Fluency Subtest - Dls,0.551938,DD,alternating,SOC,2125,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Literacy,Reading,Nonword Reading - Läst,-0.023324,DD,alternating,SOC,2125,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Literacy,Reading,Word Reading - Läst,-0.148831,DD,alternating,SOC,2125,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.6,Language,Phonology,Paulin Phonological Awareness Test,-0.263726,TD,alternating,SOC,2125,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.7,Language,Grammar,Trog–2,-0.052573,TD,alternating,SOC,2125,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.7,Literacy,Reading,Reading Fluency Subtest - Dls,0.163681,TD,alternating,SOC,2125,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.7,Literacy,Reading,Nonword Reading - Läst,0.204052,TD,alternating,SOC,2125,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.7,Literacy,Reading,Word Reading - Läst,0.163626,TD,alternating,SOC,2125,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Language,Phonology,Paulin Phonological Awareness Test,0.241123,DD,alternating,SOC,2550,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Language,Grammar,Trog–2,0.083311,DD,alternating,SOC,2550,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Literacy,Reading,Reading Fluency Subtest - Dls,0.066889,DD,alternating,SOC,2550,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Literacy,Reading,Nonword Reading - Läst,-0.097678,DD,alternating,SOC,2550,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Literacy,Reading,Word Reading - Läst,0.021003,DD,alternating,SOC,2550,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.6,Language,Phonology,Paulin Phonological Awareness Test,0.118114,TD,alternating,SOC,2550,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.7,Language,Grammar,Trog–2,0.230658,TD,alternating,SOC,2550,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.7,Literacy,Reading,Reading Fluency Subtest - Dls,-0.16382,TD,alternating,SOC,2550,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.7,Literacy,Reading,Nonword Reading - Läst,0.167785,TD,alternating,SOC,2550,response box
+1,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.7,Literacy,Reading,Word Reading - Läst,0.010256,TD,alternating,SOC,2550,response box
+2,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Language,Phonology,Paulin Phonological Awareness Test,-0.097672,DD,alternating,SOC,2975,response box
+2,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Language,Grammar,Trog–2,-0.088374,DD,alternating,SOC,2975,response box
+2,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Literacy,Reading,Reading Fluency Subtest - Dls,0.114077,DD,alternating,SOC,2975,response box
+2,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Literacy,Reading,Nonword Reading - Läst,-0.077679,DD,alternating,SOC,2975,response box
+2,38,Hedenius et al. (2020),Hedenius et al. ,2020,30,11.6,Literacy,Reading,Word Reading - Läst,-0.332341,DD,alternating,SOC,2975,response box
+2,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.6,Language,Phonology,Paulin Phonological Awareness Test,-0.214181,TD,alternating,SOC,2975,response box
+2,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.7,Language,Grammar,Trog–2,0.25963,TD,alternating,SOC,2975,response box
+2,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.7,Literacy,Reading,Reading Fluency Subtest - Dls,-0.016138,TD,alternating,SOC,2975,response box
+2,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.7,Literacy,Reading,Nonword Reading - Läst,-0.263134,TD,alternating,SOC,2975,response box
+2,38,Hedenius et al. (2020),Hedenius et al. ,2020,32,11.7,Literacy,Reading,Word Reading - Läst,-0.106637,TD,alternating,SOC,2975,response box
+1,39,Menghini et al. (2010),Menghini et al.,2010,60,11.43,Literacy,Reading,Word Reading,0.0714,DD,deterministic,FOC,324,keyboard
+1,39,Menghini et al. (2010),Menghini et al.,2010,60,11.43,Literacy,Reading,Word Reading,0.0587,DD,deterministic,FOC,324,keyboard
+1,39,Menghini et al. (2010),Menghini et al.,2010,60,11.43,Literacy,Reading,Nonword Reading,-0.0589,DD,deterministic,FOC,324,keyboard
+1,39,Menghini et al. (2010),Menghini et al.,2010,60,11.43,Literacy,Reading,Nonword Reading,0.2806,DD,deterministic,FOC,324,keyboard
+1,39,Menghini et al. (2010),Menghini et al.,2010,60,11.43,Language,Phonology,Fas,0.0519,DD,deterministic,FOC,324,keyboard
+1,39,Menghini et al. (2010),Menghini et al.,2010,60,11.43,Language,Phonology,Spoon Acc,0.1992,DD,deterministic,FOC,324,keyboard
+1,39,Menghini et al. (2010),Menghini et al.,2010,60,11.43,Language,Phonology,Spoon Times,0.1905,DD,deterministic,FOC,324,keyboard
+1,39,Menghini et al. (2010),Menghini et al.,2010,60,11.43,Language,Phonology,Nonword Repetition Acc,-0.1498,DD,deterministic,FOC,324,keyboard
+1,39,Menghini et al. (2010),Menghini et al.,2010,65,11.94,Literacy,Reading,Word Reading,-0.1,TD,deterministic,FOC,324,keyboard
+1,39,Menghini et al. (2010),Menghini et al.,2010,65,11.94,Literacy,Reading,Word Reading,-0.0679,TD,deterministic,FOC,324,keyboard
+1,39,Menghini et al. (2010),Menghini et al.,2010,65,11.94,Literacy,Reading,Nonword Reading,0.3399,TD,deterministic,FOC,324,keyboard
+1,39,Menghini et al. (2010),Menghini et al.,2010,65,11.94,Literacy,Reading,Nonword Reading,-0.053,TD,deterministic,FOC,324,keyboard
+1,39,Menghini et al. (2010),Menghini et al.,2010,65,11.94,Language,Phonology,Fas,-0.0161,TD,deterministic,FOC,324,keyboard
+1,39,Menghini et al. (2010),Menghini et al.,2010,65,11.94,Language,Phonology,Spoon Acc,-0.1823,TD,deterministic,FOC,324,keyboard
+1,39,Menghini et al. (2010),Menghini et al.,2010,65,11.94,Language,Phonology,Spoon Times,-0.0602,TD,deterministic,FOC,324,keyboard
+1,39,Menghini et al. (2010),Menghini et al.,2010,65,11.94,Language,Phonology,Nonword Repetition Acc,-0.1747,TD,deterministic,FOC,324,keyboard
